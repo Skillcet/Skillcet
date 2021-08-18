@@ -4,7 +4,7 @@ import Post from "../components/Post";
 import Menu from "../components/Menu";
 function Body() {
   return (
-    <div className="">
+    <div className="mb-14 md:mb-0">
       <div className="hidden md:inline-flex fixed w-60 h-full top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overscroll-auto ">
         <Menu />
       </div>
