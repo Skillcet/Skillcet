@@ -9,7 +9,7 @@ function MobileHeader() {
         <div
           className={
             router.pathname == "/"
-              ? "bg-blue-500 pt-4 rounded-b-lg text-white"
+              ? "bg-blue-500 pt-4 rounded-b-lg text-white transition duration-1000 ease-in-out"
               : "pt-4"
           }
         >
@@ -20,7 +20,7 @@ function MobileHeader() {
         <div
           className={
             router.pathname == "/nra"
-              ? "bg-blue-500 pt-4 rounded-b-lg text-white"
+              ? "bg-blue-500 pt-4 rounded-b-lg text-white transition duration-100 ease-in-out"
               : "pt-4"
           }
         >
