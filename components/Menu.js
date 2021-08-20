@@ -1,10 +1,21 @@
 import React from "react";
 import menuOptions from "../data/menuOptions";
+import { useRouter } from "next/router";
+import Link from "next/link";
 function Menu() {
+  const router = useRouter();
   const menuItems = menuOptions.map((item) => (
-    <p className="my-4" key={item.key}>
-      {item.name}
-    </p>
+    <div
+      className={
+        router.pathname == item.link
+          ? "bg-blue-400 py-4 px-1 rounded-r-xl my-2"
+          : "my-6"
+      }
+    >
+      <Link href={item.link}>
+        <a>{item.name}</a>
+      </Link>
+    </div>
   ));
   return (
     <div className="bg-white w-full h-full ">
