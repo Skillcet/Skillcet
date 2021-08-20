@@ -1,5 +1,5 @@
 import React from "react";
-import menuOptions from "../../data/menuOptions";
+import menuOptions from "../data/menuOptions";
 function Menu() {
   const menuItems = menuOptions.map((item) => (
     <p className="my-4" key={item.key}>
