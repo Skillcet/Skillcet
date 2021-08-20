@@ -9,11 +9,14 @@ function App({ Component, pageProps, router }) {
       animate="pageAnimate"
       variants={{
         pageInitial: {
-          opacity: 0,
+          opacity: 0.5,
         },
         pageAnimate: {
           opacity: 1,
         },
+      }}
+      transition={{
+        duration: 0.2,
       }}
     >
       <Component {...pageProps} />

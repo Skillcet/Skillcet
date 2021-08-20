@@ -4,12 +4,12 @@ import Post from "../components/Post";
 import Menu from "../components/Menu";
 function Body() {
   return (
-    <div className="mb-14 md:mb-0">
-      <div className="hidden md:inline-flex fixed w-60 h-full top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overscroll-auto ">
+    <div className="mb-14 md:mb-0 md:mr-8">
+      <div className="hidden lg:inline-flex fixed w-64 fixed?md:h-(screen-18) top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight ">
         <Menu />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-5 mt-4">
-        <div className="h-full col-span-4 md:ml-60">
+      <div className="grid grid-cols-1 md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-64">
+        <div className="h-full col-span-4 ">
           <Banner />
           <Post />
           <Post />
