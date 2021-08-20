@@ -8,12 +8,12 @@ function Menu() {
     <div
       className={
         router.pathname == item.link
-          ? "bg-blue-400 py-4 px-1 rounded-r-xl my-2"
+          ? "bg-blue-500 py-4 px-1 rounded-r-xl my-2 text-white"
           : "my-6"
       }
     >
       <Link href={item.link}>
-        <a>{item.name}</a>
+        <a className="w-full inline-flex">{item.name}</a>
       </Link>
     </div>
   ));

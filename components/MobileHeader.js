@@ -28,6 +28,28 @@ function MobileHeader() {
             <a>NRA</a>
           </Link>
         </div>
+        <div
+          className={
+            router.pathname == "/XIILevel"
+              ? "bg-blue-500 pt-4 rounded-b-lg text-white transition duration-100 ease-in-out"
+              : "pt-4"
+          }
+        >
+          <Link href="/XIILevel">
+            <a>XII Level</a>
+          </Link>
+        </div>
+        <div
+          className={
+            router.pathname == "/TierII"
+              ? "bg-blue-500 pt-4 rounded-b-lg text-white transition duration-100 ease-in-out"
+              : "pt-4"
+          }
+        >
+          <Link href="/TierII">
+            <a>Tier II</a>
+          </Link>
+        </div>
       </div>
     </div>
   );
