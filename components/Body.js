@@ -5,7 +5,7 @@ import Menu from "../components/Menu";
 function Body() {
   return (
     <div className="mb-14 md:mb-0 md:mr-8">
-      <div className="hidden lg:inline-flex fixed w-72 fixed?md:h-(screen-18) top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight ">
+      <div className="hidden lg:inline-flex  shadow-md fixed w-72 fixed?md:h-(screen-18) top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight ">
         <Menu />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72">
