@@ -4,7 +4,7 @@ import Body from "../components/Body";
 export default function Home({ data }) {
   return (
     <Layout pageTitle="Home">
-      <h1 className="ml-60">{data.hero.title}</h1>
+      {console.log(data.hero.title)}
       <Body />
     </Layout>
   );
