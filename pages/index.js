@@ -4,7 +4,7 @@ import Body from "../components/Body";
 export default function Home({ data }) {
   return (
     <Layout pageTitle="Home">
-      {console.log(data.hero.title)}
+      {console.log(data.hero?.title)}
       <Body />
     </Layout>
   );
