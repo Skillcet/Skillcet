@@ -2,7 +2,8 @@ import React from "react";
 import Banner from "../components/Banner";
 import Post from "../components/Post";
 import Menu from "../components/Menu";
-function Body() {
+import TabSelector from "./TabSelector";
+function Body({ banner, tabOption }) {
   return (
     <div className="mb-14 md:mb-0 md:mr-8">
       <div className="hidden lg:inline-flex  shadow-md fixed w-72 fixed?md:h-(screen-18) top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight ">
@@ -10,12 +11,8 @@ function Body() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72">
         <div className="h-full col-span-4 ">
-          <Banner />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+          {banner && <Banner />}
+          {tabOption && <TabSelector tabOption={tabOption} />}
         </div>
         <div className="hidden md:inline-flex bg-green-600 h-40"></div>
       </div>

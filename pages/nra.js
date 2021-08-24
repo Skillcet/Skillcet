@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
-/* import loadable from "@loadable/component"; */
+import { nraTabOptions } from "../data/tabOptions";
 import Body from "../components/Body";
-/* const Body = loadable(() => import("../components/Body")); */
-export default function Home() {
+
+export default function NRA() {
   return (
     <Layout pageTitle="NRA">
-      <Body />
+      <Body tabOption={nraTabOptions} />
     </Layout>
   );
 }
