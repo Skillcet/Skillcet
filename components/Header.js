@@ -18,9 +18,15 @@ function Header() {
       <div className=" hidden md:flex flex-row gap-1 items-center  justify-around">
         {/* menu items(3) */} <p>Menu</p>
       </div>
+
       {/* search */}
-      <div className="flex items-center justify-around col-span-2 md:col-span-1  ">
-        <p>Search</p>
+      <div className="flex w-4/5 py-2 px-2 rounded-lg  col-span-2 md:col-span-1 bg-blue-100 ">
+        <SearchIcon className="object-contain h-7 pr-4 text-gray-600 " />
+        <input
+          type="text"
+          placeholder="Search For Something"
+          className="bg-blue-100 placeholder-gray-400 w-full outline-none border-none"
+        />
       </div>
       {/* user icons*/}
       <div className="px-4  flex items-center justify-around">
