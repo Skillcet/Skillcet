@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { SearchIcon, UserIcon } from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/solid";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 function Header() {
   return (
@@ -35,7 +36,7 @@ function Header() {
         {/* user icons*/}
         <div className="flex flex-auto items-center justify-evenly">
           <p className="hidden md:flex">Student Login</p>
-          <UserIcon className="h-6 object-contain" />
+          <AccountCircleIcon className="h-7 text-gray-600 object-contain cursor-pointer" />
         </div>
       </div>
     </header>
