@@ -8,8 +8,8 @@ function Menu() {
     <div
       className={
         router.pathname == item.link
-          ? "bg-blue-500 py-2 rounded-r-3xl my-2 px-4 text-white"
-          : "my-4 px-4"
+          ? "bg-blue-500 rounded-r-3xl text-white my-2 px-4 py-3"
+          : "my-2 px-4 py-3"
       }
       key={item.key}
     >
@@ -19,7 +19,7 @@ function Menu() {
     </div>
   ));
   return (
-    <div className="bg-white w-full h-full ">
+    <div className="bg-white w-full text-sm md:text-base h-full ">
       <div className="h-60 w-full my-4 bg-green-200"></div>
       <div className=" border-t-2 border-b-2 my-8 border-black mx-auto">
         {menuItems}
