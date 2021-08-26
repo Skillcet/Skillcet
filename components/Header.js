@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import image from "../public/logo.png";
 import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -12,18 +13,23 @@ function Header({ isOpen, SetIsOpen }) {
     <header className="w-full top-0 z-50 sticky  shadow-md bg-white">
       <div className="max-w-screen-3xl mx-auto text-sm 2xl:text-base w-full flex justify-evenly h-16 md:h-18 items-center py-0 bg-white ">
         <div className="w-1/4 md:w-1/2 flex justify-around">
-          {/* logo */}
+          {/* logo and hamBurger */}
           <div className="relative flex-auto flex justify-around items-center">
-            <button onClick={() => SetIsOpen(!isOpen)}>
-              <div className="hover:bg-blue-100 hover:bg-opacity-40 p-2 rounded-full">
-                <MenuIcon className="h-6" />
-              </div>
-            </button>
-            <Link href="/">
-              <a>
-                <p>Logo</p>
-              </a>
-            </Link>
+            <div className="hidden lg:inline-flex">
+              <button onClick={() => SetIsOpen(!isOpen)}>
+                <div className="hover:bg-blue-100 hover:bg-opacity-40 p-3 rounded-full">
+                  <MenuIcon className="h-6" />
+                </div>
+              </button>
+            </div>
+
+            <div className="w-1/2 flex items-center h-full">
+              <Link href="/">
+                <a>
+                  <img src="/logo.png" className="logo ob" />
+                </a>
+              </Link>
+            </div>
           </div>
           {/* menu */}
           <div className=" hidden flex-auto md:flex flex-row gap-1 items-center justify-evenly">

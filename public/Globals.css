@@ -25,6 +25,10 @@ body {
 .menuheight {
   height: calc(100vh - 4rem);
 }
+.logo {
+  object-fit: contain;
+  width: 130px;
+}
 @media screen and (max-width: 645px) {
   body {
     background-color: #e0f1fd;
