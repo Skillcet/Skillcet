@@ -1,7 +1,9 @@
 import "tailwindcss/tailwind.css";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import "../public/Globals.css";
 function App({ Component, pageProps, router }) {
+  const [isOpen, SetIsOpen] = useState(1);
   return (
     <motion.div
       key={router.route}
@@ -19,7 +21,7 @@ function App({ Component, pageProps, router }) {
         duration: 0.2,
       }}
     >
-      <Component {...pageProps} />
+      <Component {...pageProps} isOpen={isOpen} setIsOpen={SetIsOpen} />
     </motion.div>
   );
 }

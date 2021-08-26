@@ -3,9 +3,8 @@ import Body from "../components/Body";
 import Post from "../components/Post";
 export default function Home({ data }) {
   return (
-    <Layout pageTitle="Home">
+    <Layout pageTitle="Home" banner="true">
       {/* {console.log(data.hero?.title)} */}
-      <Body banner="true" />
     </Layout>
   );
 }

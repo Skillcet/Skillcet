@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SearchIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-function Header() {
+function Header({ isOpen, SetIsOpen }) {
   const router = useRouter();
   return (
     <header className="w-full top-0 z-50 sticky  shadow-md bg-white">
@@ -13,6 +13,9 @@ function Header() {
         <div className="w-1/4 md:w-1/2 flex justify-around">
           {/* logo */}
           <div className="relative flex-auto flex justify-around items-center">
+            <button onClick={() => SetIsOpen(!isOpen)}>
+              <p>C</p>
+            </button>
             <Link href="/">
               <a>
                 <p>Logo</p>
