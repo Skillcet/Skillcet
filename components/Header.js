@@ -14,7 +14,7 @@ function Header({ isOpen, SetIsOpen }) {
       <div className="max-w-screen-3xl mx-auto text-sm 2xl:text-base w-full flex justify-evenly h-16 md:h-18 items-center py-0 bg-white ">
         <div className="w-1/4 md:w-1/2 flex justify-around">
           {/* logo and hamBurger */}
-          <div className="relative w-1/2 flex justify-center items-center">
+          <div className="relative flex justify-center items-center">
             <div className="hidden lg:inline-flex">
               <button onClick={() => SetIsOpen(!isOpen)}>
                 <div className="hover:bg-blue-100 hover:bg-opacity-40 p-3 rounded-full">
