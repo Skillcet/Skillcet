@@ -49,8 +49,8 @@ function Header({ isOpen, SetIsOpen }) {
             <div
               className={
                 router.pathname == "/skillcet"
-                  ? "text-blue-500 font-medium"
-                  : "hover:text-blue-600"
+                  ? "text-blue-700 font-medium"
+                  : "hover:text-blue-700"
               }
             >
               <Link href="/skillcet">
@@ -62,8 +62,8 @@ function Header({ isOpen, SetIsOpen }) {
             <div
               className={
                 router.pathname == "/newbatches"
-                  ? "text-blue-500 font-medium"
-                  : "hover:text-blue-600"
+                  ? "text-blue-700 font-medium"
+                  : "hover:text-blue-700"
               }
             >
               <Link href="/newbatches">
