@@ -25,7 +25,9 @@ function Header({ isOpen, SetIsOpen }) {
 
             <div className="w-1/2 flex items-center h-full">
               <Link href="/">
-                <a>{/* <img src="/logo.png" className="logo" /> */}</a>
+                <a>
+                  <img src="/logo.png" className="logo" />
+                </a>
               </Link>
             </div>
           </div>
@@ -83,10 +85,10 @@ function Header({ isOpen, SetIsOpen }) {
           {/* user icons*/}
           <div className="flex flex-auto items-center justify-evenly">
             <p className="hidden md:flex">Student Login</p>
-            <AccountCircleIcon
+            {/* <AccountCircleIcon
               style={{ fontSize: 28 }}
               className=" text-gray-600 object-contain cursor-pointer"
-            />
+            /> */}
           </div>
         </div>
       </div>
