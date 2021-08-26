@@ -2,6 +2,11 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  font-family: myFirstFont;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(GoogleSans-Regular.ttf);
 }
 html {
   overflow: scroll;

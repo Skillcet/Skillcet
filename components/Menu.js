@@ -6,11 +6,17 @@ function Menu() {
   const router = useRouter();
   const menuItems = menuOptions.map((item) => (
     <div
-      className={
+      className={`hover:text-blue-700 pl-14 text-sm
+      ${
         router.pathname == item.link
-          ? "bg-blue-500 rounded-r-3xl text-white my-2 px-4 py-3"
-          : "my-2 px-4 py-3"
+          ? "bg-blue-100 rounded-r-3xl px-5 text-blue-700 "
+          : ""
       }
+      `}
+      style={{
+        paddingTop: "11px",
+        paddingBottom: "11px",
+      }}
       key={item.key}
     >
       <Link href={item.link}>
@@ -21,8 +27,9 @@ function Menu() {
   return (
     <div className="bg-white w-full text-sm md:text-base h-full ">
       <div className="h-60 w-full my-4 bg-green-200"></div>
-      <div className=" border-t-2 border-b-2 my-8 border-black mx-auto">
-        {menuItems}
+      <div className="  my-8 mx-auto">
+        <hr className=" w-4/5 mx-auto " />
+        <div className=" my-5">{menuItems}</div>
       </div>
     </div>
   );

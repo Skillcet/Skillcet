@@ -8,7 +8,7 @@ function Body({ banner, tabOption, isOpen }) {
   return (
     <div className="mb-14 md:mb-0 md:mr-8 3xl:mr-0 ">
       <div
-        className={`hidden lg:inline-flex  shadow-md fixed w-72 fixed?md:h-(screen-18) top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight transform ${
+        className={`hidden lg:inline-flex hover:shadow-lg fixed w-72 pr-2 fixed?md:h-(screen-18) top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight transform ${
           isOpen
             ? "translate-x-0 ease-out transition duration-200"
             : "-translate-x-full ease-in transition duration-200"

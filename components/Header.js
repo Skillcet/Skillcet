@@ -17,8 +17,8 @@ function Header({ isOpen, SetIsOpen }) {
           <div className="relative flex justify-center items-center">
             <div className="hidden lg:inline-flex">
               <button onClick={() => SetIsOpen(!isOpen)}>
-                <div className="hover:bg-blue-100 hover:bg-opacity-40 p-3 mr-1 rounded-full">
-                  <MenuIcon className="h-6" />
+                <div className="hover:bg-blue-200 text-gray-600 hover:text-gray-900 hover:bg-opacity-40 p-3 mr-1 rounded-full">
+                  <MenuIcon className="h-6 " />
                 </div>
               </button>
             </div>
@@ -32,10 +32,12 @@ function Header({ isOpen, SetIsOpen }) {
             </div>
           </div>
           {/* menu */}
-          <div className=" hidden flex-auto md:flex flex-row gap-1 items-center justify-evenly">
+          <div className=" hidden flex-auto md:flex flex-row gap-1 text-gray-600 items-center justify-evenly">
             <div
               className={
-                router.pathname == "/nra" ? "text-gray-700 font-semibold" : ""
+                router.pathname == "/nra"
+                  ? "text-blue-500 font-medium"
+                  : "hover:text-blue-600"
               }
             >
               <Link href="/nra">
@@ -47,8 +49,8 @@ function Header({ isOpen, SetIsOpen }) {
             <div
               className={
                 router.pathname == "/skillcet"
-                  ? "text-gray-700 font-semibold"
-                  : ""
+                  ? "text-blue-500 font-medium"
+                  : "hover:text-blue-600"
               }
             >
               <Link href="/skillcet">
@@ -60,8 +62,8 @@ function Header({ isOpen, SetIsOpen }) {
             <div
               className={
                 router.pathname == "/newbatches"
-                  ? "text-gray-700 font-semibold"
-                  : ""
+                  ? "text-blue-500 font-medium"
+                  : "hover:text-blue-600"
               }
             >
               <Link href="/newbatches">
