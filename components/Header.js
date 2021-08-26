@@ -36,8 +36,8 @@ function Header({ isOpen, SetIsOpen }) {
             <div
               className={
                 router.pathname == "/nra"
-                  ? "text-blue-500 font-medium"
-                  : "hover:text-blue-600"
+                  ? "text-blue-700 font-medium"
+                  : "hover:text-blue-700"
               }
             >
               <Link href="/nra">
