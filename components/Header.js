@@ -83,12 +83,9 @@ function Header({ isOpen, SetIsOpen }) {
             />
           </div>
           {/* user icons*/}
-          <div className="flex flex-auto items-center justify-evenly">
-            <p className="hidden md:flex">Student Login</p>
-            {/* <AccountCircleIcon
-              style={{ fontSize: 28 }}
-              className=" text-gray-600 object-contain cursor-pointer"
-            /> */}
+          <div className="flex flex-auto  items-center justify-evenly">
+            <p className="hidden md:flex ">Student Login</p>
+            <AccountCircleIcon className=" text-gray-600  object-contain cursor-pointer" />
           </div>
         </div>
       </div>
