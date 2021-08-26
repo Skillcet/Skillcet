@@ -12,7 +12,7 @@ function Header({ isOpen, SetIsOpen }) {
   return (
     <header className="w-full top-0 z-50 sticky  shadow-md bg-white">
       <div className="max-w-screen-3xl mx-auto text-sm 2xl:text-base w-full flex justify-evenly h-16 md:h-18 items-center py-0 bg-white ">
-        <div className="w-1/4 md:w-1/2 flex justify-around">
+        <div className="w-1/3 md:w-1/2 flex justify-around">
           {/* logo and hamBurger */}
           <div className="relative flex justify-center items-center">
             <div className="hidden lg:inline-flex">
@@ -23,10 +23,10 @@ function Header({ isOpen, SetIsOpen }) {
               </button>
             </div>
 
-            <div className="w-1/2 flex items-center h-full">
+            <div className="w-3/4 flex items-center h-full">
               <Link href="/">
                 <a>
-                  <img src="/logo.png" className="logo" />
+                  <img src="/logo.svg" className="logo" />
                 </a>
               </Link>
             </div>

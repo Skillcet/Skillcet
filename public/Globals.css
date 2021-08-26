@@ -33,4 +33,8 @@ body {
   body {
     background-color: #e0f1fd;
   }
+  .logo {
+    object-fit: contain;
+    width: 200px;
+  }
 }
