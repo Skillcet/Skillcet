@@ -17,7 +17,7 @@ function Header({ isOpen, SetIsOpen }) {
           <div className="relative flex justify-center items-center">
             <div className="hidden lg:inline-flex">
               <button onClick={() => SetIsOpen(!isOpen)}>
-                <div className="hover:bg-blue-100 hover:bg-opacity-40 p-3 rounded-full">
+                <div className="hover:bg-blue-100 hover:bg-opacity-40 p-3 mr-1 rounded-full">
                   <MenuIcon className="h-6" />
                 </div>
               </button>
@@ -85,7 +85,7 @@ function Header({ isOpen, SetIsOpen }) {
           {/* user icons*/}
           <div className="flex flex-auto  items-center justify-evenly">
             <p className="hidden md:flex ">Student Login</p>
-            <AccountCircleIcon className=" text-gray-600  object-contain cursor-pointer" />
+            {/* <AccountCircleIcon className=" text-gray-600  object-contain cursor-pointer" /> */}
           </div>
         </div>
       </div>
