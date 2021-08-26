@@ -13,14 +13,18 @@ function Menu() {
           : ""
       }
       `}
-      style={{
-        paddingTop: "11px",
-        paddingBottom: "11px",
-      }}
       key={item.key}
     >
       <Link href={item.link}>
-        <a className="w-full inline-flex">{item.name}</a>
+        <a
+          className="w-full inline-flex"
+          style={{
+            paddingTop: "11px",
+            paddingBottom: "11px",
+          }}
+        >
+          {item.name}
+        </a>
       </Link>
     </div>
   ));
