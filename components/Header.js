@@ -25,9 +25,7 @@ function Header({ isOpen, SetIsOpen }) {
 
             <div className="w-1/2 flex items-center h-full">
               <Link href="/">
-                <a>
-                  <img src="/logo.png" className="logo ob" />
-                </a>
+                <a>{/* <img src="/logo.png" className="logo" /> */}</a>
               </Link>
             </div>
           </div>
