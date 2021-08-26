@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import MenuIcon from "@material-ui/icons/Menu";
 import { SearchIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -14,7 +15,9 @@ function Header({ isOpen, SetIsOpen }) {
           {/* logo */}
           <div className="relative flex-auto flex justify-around items-center">
             <button onClick={() => SetIsOpen(!isOpen)}>
-              <p>C</p>
+              <div className="hover:bg-blue-100 hover:bg-opacity-40 p-2 rounded-full">
+                <MenuIcon className="h-6" />
+              </div>
             </button>
             <Link href="/">
               <a>
@@ -26,7 +29,7 @@ function Header({ isOpen, SetIsOpen }) {
           <div className=" hidden flex-auto md:flex flex-row gap-1 items-center justify-evenly">
             <div
               className={
-                router.pathname == "/nra" ? "text-gray-700 font-bold" : ""
+                router.pathname == "/nra" ? "text-gray-700 font-semibold" : ""
               }
             >
               <Link href="/nra">
@@ -37,7 +40,9 @@ function Header({ isOpen, SetIsOpen }) {
             </div>
             <div
               className={
-                router.pathname == "/skillcet" ? "text-gray-700 font-bold" : ""
+                router.pathname == "/skillcet"
+                  ? "text-gray-700 font-semibold"
+                  : ""
               }
             >
               <Link href="/skillcet">
@@ -49,7 +54,7 @@ function Header({ isOpen, SetIsOpen }) {
             <div
               className={
                 router.pathname == "/newbatches"
-                  ? "text-gray-700 font-bold"
+                  ? "text-gray-700 font-semibold"
                   : ""
               }
             >
