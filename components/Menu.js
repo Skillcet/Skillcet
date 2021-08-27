@@ -9,8 +9,8 @@ function Menu() {
       className={`hover:text-blue-700 pl-14 text-sm
       ${
         router.pathname == item.link
-          ? "bg-blue-100 rounded-r-3xl px-5 text-blue-700 "
-          : ""
+          ? "bg-blue-100 rounded-r-3xl px-5 font-medium text-blue-700 "
+          : "font-normal"
       }
       `}
       key={item.key}
