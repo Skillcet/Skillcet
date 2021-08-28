@@ -11,7 +11,7 @@ function Banner() {
     <div
       className={`${
         isExpanded ? "" : ""
-      } w-full border-[1px] bg-white h-full rounded-lg p-4`}
+      } max-w-[770px] mx-auto border-[1px] bg-white lg:hover:shadow-md h-full rounded-lg p-4`}
     >
       <div className="flex flex-col ">
         {/* Heading,subtitle and image */}
@@ -19,13 +19,13 @@ function Banner() {
           <div className="mr-1 md:mr-4">
             {/* Title */}
             <div>
-              <h3 className=" text-base lg:text-lg font-medium text-customGray">
+              <h3 className="text-base lg:text-base leading-normal font-semibold text-customGray">
                 Afghanistan-Taliban Crisis LIVE Updates: US Drone Strike Targets
                 ISIS "Planner" In Afghanistan: Pentagon
               </h3>
             </div>
             {/* SubTitle */}
-            <div>
+            <div className="mb-2">
               <p className="text-gray-500 text-sm">5 hours ago.</p>
             </div>
             {/* First point */}
@@ -62,7 +62,7 @@ function Banner() {
               isExpanded
                 ? "transform rotate-180 ease-in duration-300"
                 : "transform rotate-0 ease-out duration-300"
-            } hover:text-blue-600 `}
+            } lg:hover:text-blue-600`}
           >
             <ExpandMoreIcon />
           </button>

@@ -2,16 +2,14 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  font-family: myFirstFont;
+  -webkit-tap-highlight-color: transparent;
 }
-@font-face {
-  font-family: myFirstFont;
-  src: url(GoogleSans-Regular.ttf);
-}
+
 html {
   overflow: scroll;
   overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
@@ -21,6 +19,7 @@ html {
 body {
   background-color: white;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 .shadow-mobile-footer {
   box-shadow: 0px -2px 6px -1px rgba(112, 112, 112, 0.55);
