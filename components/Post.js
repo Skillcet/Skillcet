@@ -13,16 +13,29 @@ function Banner() {
         isExpanded ? "" : ""
       } w-full border-[1px] bg-white h-full rounded-lg p-4`}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
+        {/* Heading,subtitle and image */}
         <div className=" flex items-center w-full justify-between">
           <div className="mr-1 md:mr-4">
+            {/* Title */}
             <div>
-              <h3 className="text-lg font-medium text-customGray">
+              <h3 className=" text-base lg:text-lg font-medium text-customGray">
                 Afghanistan-Taliban Crisis LIVE Updates: US Drone Strike Targets
                 ISIS "Planner" In Afghanistan: Pentagon
               </h3>
             </div>
+            {/* SubTitle */}
+            <div>
+              <p className="text-gray-500 text-sm">5 hours ago.</p>
+            </div>
+            {/* First point */}
+            <div className="text-customGray text-sm lg:text-base">
+              <ul className="list-disc list-inside">
+                <li className="mt-1">This is a point</li>
+              </ul>
+            </div>
           </div>
+          {/* Image */}
           <div className="flex flex-none w-[100px] h-[100px] items-center relative">
             <Image
               src={SampleImage}
@@ -33,9 +46,15 @@ function Banner() {
             />
           </div>
         </div>
+        {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
-          <div>This is Summary</div>
+          <ul className="list-disc list-inside text-sm lg:text-base">
+            <li className="my-3">This Happend</li>
+            <li className="my-3">This Happend</li>
+            <li className="my-3">This Happend</li>
+          </ul>
         </Expand>
+        {/* The Readmore line */}
         <div className="flex justify-end mt-2">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
