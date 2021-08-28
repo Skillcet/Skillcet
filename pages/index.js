@@ -2,11 +2,7 @@ import Layout from "../components/layout";
 import Body from "../components/Body";
 import Post from "../components/Post";
 export default function Home({ data }) {
-  return (
-    <Layout pageTitle="Home" banner="true">
-      {/* {console.log(data.hero?.title)} */}
-    </Layout>
-  );
+  return <Layout pageTitle="Home" banner="true"></Layout>;
 }
 
 // export async function getStaticProps() {

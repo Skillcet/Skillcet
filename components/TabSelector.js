@@ -25,10 +25,6 @@ function TabSelector({ tabOption }) {
           {tabContent}
           <div className="my-4">
             <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
           </div>
         </Tab.Panels>
       </Tab.Group>
