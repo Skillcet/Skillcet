@@ -32,7 +32,7 @@ function Banner() {
             {/* First point */}
             <div className="text-customGray hidden sm:inline text-xs lg:text-sm">
               <ul className="list-disc list-inside">
-                <li className="mt-1">This Happened</li>
+                <li className="mt-1">First Point</li>
               </ul>
             </div>
           </div>
@@ -50,6 +50,7 @@ function Banner() {
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
           <ul className="list-disc list-inside text-xs lg:text-sm">
+            <li className="mt-1 sm:hidden">First Point</li>
             <li className="my-3">This Happened</li>
             <li className="my-3">This Happened</li>
             <li className="my-3">This Happened</li>
