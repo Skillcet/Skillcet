@@ -20,7 +20,7 @@ function Banner() {
           <div className="mr-4 h-auto">
             {/* Title */}
             <div className="h-1/2">
-              <h3 className="text-sm lg:text-base leading-normal font-semibold text-customGray">
+              <h3 className="text-sm lg:text-base leading-normal font-bold text-customGray">
                 Afghanistan-Taliban Crisis LIVE Updates: US Drone Strike Targets
                 ISIS "Planner" In Afghanistan: Pentagon
               </h3>
@@ -30,7 +30,7 @@ function Banner() {
               <p className="text-gray-500 text-xs">5 hours ago.</p>
             </div>
             {/* First point */}
-            <div className="text-customGray hidden sm:inline text-xs lg:text-sm">
+            <div className="text-customGray hidden sm:inline text-xs lg:text-sm font-semibold">
               <ul className="list-disc list-inside">
                 <li className="mt-1">First Point</li>
               </ul>
@@ -49,7 +49,7 @@ function Banner() {
         </div>
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
-          <ul className="list-disc list-inside text-xs lg:text-sm">
+          <ul className="list-disc list-inside text-xs lg:text-sm font-semibold">
             <li className="mt-1 sm:hidden">First Point</li>
             <li className="my-3">This Happened</li>
             <li className="my-3">This Happened</li>
