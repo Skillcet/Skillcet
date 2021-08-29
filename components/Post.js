@@ -30,9 +30,9 @@ function Banner() {
               <p className="text-gray-500 text-xs">5 hours ago.</p>
             </div>
             {/* First point */}
-            <div className="text-customGray hidden sm:inline text-sm lg:text-base">
+            <div className="text-customGray hidden sm:inline text-xs lg:text-sm">
               <ul className="list-disc list-inside">
-                <li className="mt-1">This is a point</li>
+                <li className="mt-1">This Happened</li>
               </ul>
             </div>
           </div>
@@ -49,10 +49,10 @@ function Banner() {
         </div>
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
-          <ul className="list-disc list-inside text-sm lg:text-base">
-            <li className="my-3">This Happend</li>
-            <li className="my-3">This Happend</li>
-            <li className="my-3">This Happend</li>
+          <ul className="list-disc list-inside text-xs lg:text-sm">
+            <li className="my-3">This Happened</li>
+            <li className="my-3">This Happened</li>
+            <li className="my-3">This Happened</li>
           </ul>
         </Expand>
         {/* The Readmore line */}
