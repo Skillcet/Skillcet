@@ -11,25 +11,26 @@ function Banner() {
     <div
       className={`${
         isExpanded ? "" : ""
-      } max-w-[770px] mx-auto border-[1px] bg-white lg:hover:shadow-md h-full rounded-lg p-4`}
+      } max-w-[770px] mx-auto border-[1px] bg-white lg:hover:shadow-md h-full rounded-lg px-4 pt-4 pb-1`}
     >
       <div className="flex flex-col ">
         {/* Heading,subtitle and image */}
-        <div className=" flex items-center w-full justify-between">
-          <div className="mr-1 md:mr-4">
+        <div className=" flex items-center w-full justify-between align-middle">
+          {/* Heading and subs */}
+          <div className="mr-4 h-auto">
             {/* Title */}
-            <div>
-              <h3 className="text-base lg:text-base leading-normal font-semibold text-customGray">
+            <div className="h-1/2">
+              <h3 className="text-sm lg:text-base leading-normal font-semibold text-customGray">
                 Afghanistan-Taliban Crisis LIVE Updates: US Drone Strike Targets
                 ISIS "Planner" In Afghanistan: Pentagon
               </h3>
             </div>
             {/* SubTitle */}
-            <div className="mb-2">
-              <p className="text-gray-500 text-sm">5 hours ago.</p>
+            <div className="my-2">
+              <p className="text-gray-500 text-xs">5 hours ago.</p>
             </div>
             {/* First point */}
-            <div className="text-customGray text-sm lg:text-base">
+            <div className="text-customGray hidden sm:inline text-sm lg:text-base">
               <ul className="list-disc list-inside">
                 <li className="mt-1">This is a point</li>
               </ul>
