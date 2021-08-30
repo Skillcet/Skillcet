@@ -4,14 +4,17 @@ import Image from "next/image";
 import SampleImage from "../public/sample.jpg";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-function Banner() {
-  // const classes = useStyles();
+function Post({ title, time, subTitle, points }) {
+  const Points = points?.map((point) => (
+    <li className="my-3">{point.ThePoint}</li>
+  ));
+
   const [isExpanded, setIsExpanded] = useState(0);
   return (
     <div
       className={`${
         isExpanded ? "" : ""
-      } max-w-[770px] mx-auto border-[1px] bg-white lg:hover:shadow-md h-full rounded-lg px-4 pt-4 pb-1`}
+      } max-w-[770px] mx-auto border-[1px] bg-white lg:hover:shadow-md text-customGray rounded-lg px-4 pt-4 pb-1 my-4 `}
     >
       <div className="flex flex-col ">
         {/* Heading,subtitle and image */}
@@ -21,18 +24,17 @@ function Banner() {
             {/* Title */}
             <div className="h-1/2">
               <h3 className="text-sm lg:text-base leading-normal font-bold text-customGray">
-                Afghanistan-Taliban Crisis LIVE Updates: US Drone Strike Targets
-                ISIS "Planner" In Afghanistan: Pentagon
+                {title}
               </h3>
             </div>
             {/* SubTitle */}
             <div className="my-2">
-              <p className="text-gray-500 text-xs">5 hours ago.</p>
+              <p className="text-gray-500 text-xs">{time}</p>
             </div>
             {/* First point */}
             <div className="text-customGray hidden sm:inline text-xs lg:text-sm font-semibold">
               <ul className="list-disc list-inside">
-                <li className="mt-1">First Point</li>
+                <li className="mt-1">{subTitle}</li>
               </ul>
             </div>
           </div>
@@ -50,10 +52,8 @@ function Banner() {
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
           <ul className="list-disc list-inside text-xs lg:text-sm font-semibold">
-            <li className="mt-1 sm:hidden">First Point</li>
-            <li className="my-3">This Happened</li>
-            <li className="my-3">This Happened</li>
-            <li className="my-3">This Happened</li>
+            <li className="mt-1 sm:hidden">{subTitle}</li>
+            {Points}
           </ul>
         </Expand>
         {/* The Readmore line */}
@@ -74,7 +74,7 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default Post;
 
 /*<div className={classes.root}>
       <Accordion>

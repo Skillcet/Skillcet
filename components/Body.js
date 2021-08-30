@@ -4,9 +4,19 @@ import Banner from "../components/Banner";
 import Post from "../components/Post";
 import Menu from "../components/Menu";
 import TabSelector from "./TabSelector";
-function Body({ banner, tabOption, isOpen }) {
+function Body({ data, banner, tabOption, isOpen }) {
+  console.log(data);
+  const posts = data?.map((data) => (
+    <Post
+      title={data.Title}
+      subTitle={data.SubTitle}
+      time="5 hours ago."
+      points={data.Points}
+    />
+  ));
+
   return (
-    <div className="mb-14 md:mb-0 md:mr-8 3xl:mr-0 ">
+    <div className="mb-14 md:mb-0 md:mr-8 3xl:mr-0 mx-auto">
       <div
         className={`hidden lg:inline-flex hover:shadow-lg fixed w-72 pr-2 border-r top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight transform ${
           isOpen
@@ -16,10 +26,11 @@ function Body({ banner, tabOption, isOpen }) {
       >
         <Menu />
       </div>
-      <div className="grid grid-cols-1  md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72 3xl:mx-auto">
+      <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72 3xl:mx-auto">
         <div className="h-full col-span-4 ">
           {banner && <Banner />}
           {tabOption && <TabSelector tabOption={tabOption} />}
+          {!tabOption && data && <div>{posts}</div>}
         </div>
         <div
           className={`hidden md:inline-flex ${

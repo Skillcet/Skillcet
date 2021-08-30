@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 import Body from "../components/Body";
 import Post from "../components/Post";
 export default function Home({ data }) {
-  return <Layout pageTitle="Home" banner="true"></Layout>;
+  return <Layout pageTitle="Home" banner="true" data={data}></Layout>;
 }
 
 // export async function getStaticProps() {
@@ -12,3 +12,11 @@ export default function Home({ data }) {
 //     props: { data },
 //   };
 // }
+export async function getStaticProps(context) {
+  const res = await fetch(`${process.env.BACKEND_URL}/homepage-posts`);
+  const data = await res.json();
+
+  return {
+    props: { data }, // will be passed to the page component as props
+  };
+}

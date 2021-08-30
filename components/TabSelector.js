@@ -16,7 +16,7 @@ function TabSelector({ tabOption }) {
     <Tab.Panel key={option.key}>{option.content}</Tab.Panel>
   ));
   return (
-    <div className="w-11/12 mx-auto rounded-xl">
+    <div className="rounded-xl">
       <Tab.Group defaultIndex="0">
         <Tab.List className="flex justify-between rounded-xl bg-blue-500 text-white">
           {tabOptions}
