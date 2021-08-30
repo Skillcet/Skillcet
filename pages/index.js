@@ -13,7 +13,9 @@ export default function Home({ data }) {
 //   };
 // }
 export async function getStaticProps(context) {
-  const res = await fetch(`${process.env.BACKEND_URL}/homepage-posts`);
+  const res = await fetch(
+    `https://mighty-wave-83703.herokuapp.com/homepage-posts`
+  );
   const data = await res.json();
 
   return {
