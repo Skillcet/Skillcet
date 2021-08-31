@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Expand from "react-expand-animated";
 import Image from "next/image";
-import SampleImage from "../public/sample.jpg";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-function Post({ title, time, subTitle, points }) {
+function Post({ title, time, subTitle, points, picture }) {
   const Points = points?.map((point) => (
     <li className="my-3">{point.ThePoint}</li>
   ));
@@ -41,7 +40,7 @@ function Post({ title, time, subTitle, points }) {
           {/* Image */}
           <div className="flex flex-none w-[100px] h-[100px] items-center relative">
             <Image
-              src={SampleImage}
+              src={picture}
               objectFit="contain"
               layout="fill"
               objectPosition="left"

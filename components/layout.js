@@ -8,6 +8,8 @@ export default function Layout({
   pageTitle,
   banner,
   tabOption,
+  tabData,
+  tabNames,
   data,
 }) {
   const [isOpen, SetIsOpen] = useState(1);
@@ -18,7 +20,14 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header SetIsOpen={SetIsOpen} isOpen={isOpen} />
-      <Body banner={banner} tabOption={tabOption} isOpen={isOpen} data={data} />
+      <Body
+        banner={banner}
+        tabOption={tabOption}
+        isOpen={isOpen}
+        tabNames={tabNames}
+        tabData={tabData}
+        data={data}
+      />
       <main>{children}</main>
       <MobileHeader />
     </>

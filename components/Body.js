@@ -4,17 +4,8 @@ import Banner from "../components/Banner";
 import Post from "../components/Post";
 import Menu from "../components/Menu";
 import TabSelector from "./TabSelector";
-function Body({ data, banner, tabOption, isOpen }) {
-  console.log(data);
-  const posts = data?.map((data) => (
-    <Post
-      title={data.Title}
-      subTitle={data.SubTitle}
-      time="5 hours ago."
-      points={data.Points}
-    />
-  ));
-
+function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
+  console.log(tabData);
   return (
     <div className="mb-14 md:mb-0 md:mr-8 3xl:mr-0 mx-auto">
       <div
@@ -26,14 +17,28 @@ function Body({ data, banner, tabOption, isOpen }) {
       >
         <Menu />
       </div>
-      <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72 3xl:mx-auto">
+      <div className="grid grid-cols-1 mx-auto md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72 3xl:mx-auto">
         <div className="h-full col-span-4 ">
           {banner && <Banner />}
-          {tabOption && <TabSelector tabOption={tabOption} />}
-          {!tabOption && data && <div>{posts}</div>}
+          {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
+          {!tabOption && data && (
+            <div>
+              {data?.map((object) => {
+                return (
+                  <Post
+                    title={object.Title}
+                    subTitle={object.SubTitle}
+                    time="5 hours ago."
+                    points={object.Points}
+                    picture={object.PostPicture.url}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
         <div
-          className={`hidden md:inline-flex ${
+          className={`hidden md:inline-flex col-span-1  ${
             isOpen ? "bg-blue-500" : "bg-red-500"
           } h-40`}
         ></div>

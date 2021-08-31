@@ -1,28 +1,23 @@
 const nraTabOptions = [
   {
     key: 1,
-    title: "NRA",
-    content: "content 1",
+    title: "Tab1",
   },
   {
     key: 2,
-    title: "NRACET",
-    content: "content 2",
+    title: "Tab2",
   },
   {
     key: 3,
-    title: "FAQ's",
-    content: "content 3",
+    title: "Tab3",
   },
   {
     key: 4,
-    title: "SKILLCET",
-    content: "content 4",
+    title: "Tab4",
   },
   {
     key: 5,
-    title: "TIER II",
-    content: "content 5",
+    title: "Tab5",
   },
 ];
 const graduationTabOptions = [
