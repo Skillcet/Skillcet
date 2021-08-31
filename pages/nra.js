@@ -21,6 +21,7 @@ export default function NRA({ data }) {
   const Tab4Data = data.filter((option) => option.Tab == "Tab4");
   const Tab5Data = data.filter((option) => option.Tab == "Tab5");
 
+  console.log(Tab3Data);
   // const TabData = [Tab1Data, Tab2Data, Tab3Data, Tab4Data, Tab5Data];
 
   const TabPanels = [
@@ -58,7 +59,7 @@ export default function NRA({ data }) {
           subTitle={option.Post.SubTitle}
           time={option.Post.published_at}
           points={option.Post.Points}
-          picture={option.Post.PostPicture.url}
+          picture={option.Post.PostPicture.url || null}
         />
       ))}
     </Tab.Panel>,
@@ -70,7 +71,7 @@ export default function NRA({ data }) {
           subTitle={option.Post.SubTitle}
           time={option.Post.published_at}
           points={option.Post.Points}
-          picture={option.Post.PostPicture.url}
+          picture={option.Post.PostPicture.url || null}
         />
       ))}
     </Tab.Panel>,
