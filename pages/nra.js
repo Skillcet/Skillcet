@@ -99,7 +99,7 @@ export default function NRA({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`https://mighty-wave-83703.herokuapp.com/nra-posts`);
 
   // `https://mighty-wave-83703.herokuapp.com/nra-posts?_sort=Tab:ASC`
