@@ -5,6 +5,16 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+//Marquee tool
+.marquee-container::before {
+  background: transparent;
+}
+.marquee-container:not(.horizontal)::before {
+  background: transparent !important;
+}
+.marquee-container:not(.horizontal)::after {
+  background: transparent !important;
+}
 html {
   overflow: scroll;
   overflow-x: hidden;

@@ -1,9 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import Banner from "../components/Banner";
 import Post from "../components/Post";
 import Menu from "../components/Menu";
 import TabSelector from "./TabSelector";
+import WidgetBar from "./WidgetBar";
 function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
   console.log(tabData);
   return (
@@ -37,11 +37,9 @@ function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
             </div>
           )}
         </div>
-        <div
-          className={`hidden md:inline-flex col-span-1  ${
-            isOpen ? "bg-blue-500" : "bg-red-500"
-          } h-40`}
-        ></div>
+        <div className={`hidden md:inline-flex col-span-1 h-40`}>
+          <WidgetBar />
+        </div>
       </div>
     </div>
   );
