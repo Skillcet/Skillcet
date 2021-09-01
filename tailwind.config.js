@@ -7,6 +7,10 @@ module.exports = {
       colors: {
         customGray: "#202124",
       },
+      gridTemplateColumns: {
+        "auto-fit": "repeat(auto-fit, minmax(100px, 1fr))",
+        14: "repeat(14,minmax(100px,1fr))",
+      },
     },
     screens: {
       sm: "640px",

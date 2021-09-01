@@ -17,8 +17,9 @@ function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
       >
         <Menu />
       </div>
-      <div className="grid grid-cols-1 mx-auto md:grid-cols-5 mt-4 max-w-screen-xl lg:ml-72 3xl:mx-auto">
-        <div className="h-full col-span-4 ">
+      <div className="grid grid-cols-1 mx-auto md:grid-cols-5  mt-4 max-w-screen-xl lg:ml-72 3xl:mx-auto">
+        {/* Feed */}
+        <div className="h-full col-span-4  w-[95%] mx-auto">
           {banner && <Banner />}
           {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
           {!tabOption && data && (
@@ -36,7 +37,9 @@ function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
               })}
             </div>
           )}
+          {/* Footer */}
         </div>
+        {/* Widgets */}
         <div className={`hidden md:inline-flex col-span-1 h-40`}>
           <WidgetBar />
         </div>

@@ -5,9 +5,9 @@ function TabSelector({ tabNames, tabData }) {
   //
 
   return (
-    <div className="rounded-xl w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto">
       <Tab.Group defaultIndex="0">
-        <Tab.List className="flex justify-between rounded-xl bg-blue-500 text-white">
+        <Tab.List className="flex bg-blue-500 px-6 rounded-xl text-white">
           {tabNames}
         </Tab.List>
         <Tab.Panels>{tabData}</Tab.Panels>
