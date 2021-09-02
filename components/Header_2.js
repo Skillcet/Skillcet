@@ -36,7 +36,7 @@ function Header_2({ isOpen, SetIsOpen }) {
           </div>
 
           {/* Header-Middle */}
-          <div className="h-full flex items-center justify-around w-full text-sm">
+          <div className="h-full flex items-center justify-around w-full text-[20px]">
             {/* Header-Middle__Items */}
             <div className="hidden md:inline-flex">NRA</div>
             <div className="hidden md:inline-flex">SkillCET</div>
