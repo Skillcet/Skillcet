@@ -10,7 +10,7 @@ function Header_2({ isOpen, SetIsOpen }) {
       <div className="h-full bg-white p-[8px] ">
         <div className="flex items-center h-full lg:mx-[26px]">
           {/* Header-Left */}
-          <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-between mr-[32px]">
             {/* Header-Left__Items */}
             <button
               onClick={() => SetIsOpen(!isOpen)}
@@ -21,7 +21,7 @@ function Header_2({ isOpen, SetIsOpen }) {
               </div>
             </button>
 
-            <div className=" relative h-[20px] w-[80px] sm:h-[24px] sm:w-[100px] flex items-center">
+            <div className=" relative h-[20px] w-[80px] sm:h-[34px] sm:w-[131px] flex items-center">
               <Link href="/">
                 <a>
                   <Image
@@ -36,22 +36,23 @@ function Header_2({ isOpen, SetIsOpen }) {
           </div>
 
           {/* Header-Middle */}
-          <div className="h-full flex items-center justify-around w-full text-[20px]">
+          <div className="h-full w-4/5 flex items-center justify-between mx-auto text-base 3xl:text-[20px]">
             {/* Header-Middle__Items */}
-            <div className="hidden md:inline-flex">NRA</div>
-            <div className="hidden md:inline-flex">SkillCET</div>
-            <div className="hidden md:inline-flex">New Batches</div>
-            <div className="h-full flex items-center bg-blue-100 rounded-lg px-3 w-11/12 sm:w-4/5 max-w-3xl">
-              <SearchIcon className="h-6 text-gray-600" />
+
+            <div className="hidden md:inline-flex mr-6">NRA</div>
+            <div className="hidden md:inline-flex mr-6">SkillCET</div>
+            <div className="hidden md:inline-flex mr-[32px]">New Batches</div>
+            <div className="h-full flex items-center bg-customSearchBar rounded-lg px-3 w-4/5 sm:w-4/5 max-w-[710px] flex-shrink">
+              <SearchIcon className="h-6 text-gray-600 ml-3 mr-6" />
               <input
                 type="text"
                 placeholder="Search for anything"
-                className="bg-transparent ml-2 outline-none border-none w-full"
+                className="bg-transparent outline-none border-none w-full"
               />
             </div>
           </div>
           {/* Header-Right */}
-          <div className=" flex sm:w-[200px] items-center justify-between">
+          <div className=" flex sm:w-[200px] items-center justify-between ml-[32px]">
             {/* Header-Right__Items */}
             <div className="text-sm hidden sm:inline-flex">Student Login</div>
             <div className="pr-2 ml-[32px]">

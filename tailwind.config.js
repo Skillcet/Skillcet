@@ -5,7 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customGray: "#202124",
+        customGray: "#434343",
+        primaryBlue1: "#2770ba",
+        secondaryBlue1: "#4aa3ec",
+        customLightGray: "#656666",
+        customSearchBar: "#e2f1fd",
       },
       gridTemplateColumns: {
         "auto-fit": "repeat(auto-fit, minmax(100px, 1fr))",
