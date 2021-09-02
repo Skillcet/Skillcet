@@ -36,8 +36,11 @@ function Header_2({ isOpen, SetIsOpen }) {
           </div>
 
           {/* Header-Middle */}
-          <div className="h-full flex items-center justify-center w-full">
+          <div className="h-full flex items-center justify-around w-full text-[20px]">
             {/* Header-Middle__Items */}
+            <div>NRA</div>
+            <div>SkillCET</div>
+            <div>New Batches</div>
             <div className="h-full flex items-center bg-blue-100 rounded-lg px-3 w-11/12 sm:w-4/5 max-w-3xl">
               <SearchIcon className="h-6 text-gray-600" />
               <input
