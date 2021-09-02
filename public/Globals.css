@@ -53,3 +53,8 @@ body {
     width: 200px;
   }
 }
+
+@font-face {
+  font-family: Strawford;
+  src: url(/StrawfordMedium);
+}
