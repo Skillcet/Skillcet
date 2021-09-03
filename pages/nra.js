@@ -27,7 +27,7 @@ export default function NRA({ data }) {
   // const TabData = [Tab1Data, Tab2Data, Tab3Data, Tab4Data, Tab5Data];
 
   const TabPanels = [
-    <Tab.Panel>
+    <Tab.Panel key={1}>
       {Tab1Data.map((option) => {
         return (
           <Post
@@ -42,9 +42,10 @@ export default function NRA({ data }) {
       })}
     </Tab.Panel>,
     ,
-    <Tab.Panel>
+    <Tab.Panel key={2}>
       {Tab2Data.map((option) => (
         <Post
+          key={option.Post._id}
           title={option.Post.PostTitle}
           subTitle={option.Post.SubTitle}
           time={option.Post.published_at}
@@ -54,9 +55,10 @@ export default function NRA({ data }) {
       ))}
     </Tab.Panel>,
     ,
-    <Tab.Panel>
+    <Tab.Panel key={3}>
       {Tab3Data.map((option) => (
         <Post
+          key={option.Post._id}
           title={option.Post.PostTitle}
           subTitle={option.Post.SubTitle}
           time={option.Post.published_at}
@@ -66,9 +68,10 @@ export default function NRA({ data }) {
       ))}
     </Tab.Panel>,
     ,
-    <Tab.Panel>
+    <Tab.Panel key={4}>
       {Tab4Data.map((option) => (
         <Post
+          key={option.Post._id}
           title={option.Post.PostTitle}
           subTitle={option.Post.SubTitle}
           time={option.Post.published_at}
@@ -78,14 +81,16 @@ export default function NRA({ data }) {
       ))}
     </Tab.Panel>,
     ,
-    <Tab.Panel>
+    <Tab.Panel key={5}>
       {Tab5Data.map((option) => (
         <Post
+          key={option._id}
           title={option.Post.PostTitle}
           subTitle={option.Post.SubTitle}
           time={option.Post.published_at}
           points={option.Post.Points}
-          picture={option.Post.PostPicture.url}
+          picture={option.Post.PostPicture.formats.small.url}
+          alt={option.Post.PostPicture.alternativeText}
         />
       ))}
     </Tab.Panel>,

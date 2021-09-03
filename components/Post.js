@@ -3,12 +3,14 @@ import Expand from "react-expand-animated";
 import Image from "next/image";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-function Post({ title, time, subTitle, points, picture }) {
+function Post({ title, time, subTitle, points, picture, alt }) {
   const Points = points?.map((point) => (
-    <li className="my-3">{point.ThePoint}</li>
+    <li className="my-3" key={point._id}>
+      {point.ThePoint}
+    </li>
   ));
 
-  const [isExpanded, setIsExpanded] = useState(0);
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div
       className={`${
@@ -41,6 +43,7 @@ function Post({ title, time, subTitle, points, picture }) {
           <div className="flex flex-none w-[100px] h-[100px] items-center relative">
             <Image
               src={picture}
+              alt={alt}
               objectFit="contain"
               layout="fill"
               objectPosition="left"
