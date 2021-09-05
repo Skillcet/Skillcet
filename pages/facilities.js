@@ -1,9 +1,9 @@
 import Layout from "../components/layout";
-import { TierIITabOptions } from "../data/tabOptions";
+import { FacilitiesTabOptions } from "../data/tabOptions";
 import { Tab } from "@headlessui/react";
 import Post from "../components/Post";
 
-const tabNames = TierIITabOptions.map((option) => (
+const tabNames = FacilitiesTabOptions.map((option) => (
   <Tab
     key={option.key}
     className={({ selected }) =>
@@ -17,11 +17,11 @@ const tabNames = TierIITabOptions.map((option) => (
 ));
 
 export default function NRA({ data, widgetData }) {
-  const Tab1Data = data.filter((option) => option.Tab == "SSC");
-  const Tab2Data = data.filter((option) => option.Tab == "IBPS");
-  const Tab3Data = data.filter((option) => option.Tab == "RRB");
-  const Tab4Data = data.filter((option) => option.Tab == "Skillcet");
-  const Tab5Data = data.filter((option) => option.Tab == "Others");
+  const Tab1Data = data.filter((option) => option.Tab == "DigitalClassroom");
+  const Tab2Data = data.filter((option) => option.Tab == "ComputerLab");
+  const Tab3Data = data.filter((option) => option.Tab == "DiscussionHall");
+  const Tab4Data = data.filter((option) => option.Tab == "StudyHall");
+  const Tab5Data = data.filter((option) => option.Tab == "Hostels");
 
   // const TabData = [Tab1Data, Tab2Data, Tab3Data, Tab4Data, Tab5Data];
 
@@ -101,7 +101,7 @@ export default function NRA({ data, widgetData }) {
 
   return (
     <Layout
-      pageTitle="Tier II"
+      pageTitle="Facilities"
       tabOption={1}
       tabNames={tabNames}
       tabData={TabPanels}
@@ -112,7 +112,7 @@ export default function NRA({ data, widgetData }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    `https://mighty-wave-83703.herokuapp.com/tier-ii-posts`
+    `https://mighty-wave-83703.herokuapp.com/facilities-posts`
   );
   const data = await res.json();
   const res1 = await fetch(

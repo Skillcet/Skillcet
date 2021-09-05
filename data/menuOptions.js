@@ -7,7 +7,7 @@ const menuOptions = [
   {
     key: 2,
     name: "Graduate Level",
-    link: "/GraduateLevel",
+    link: "/graduatelevel",
   },
   {
     key: 3,
@@ -47,7 +47,7 @@ const menuOptions = [
   {
     key: 10,
     name: "SKILLCET",
-    link: "/Skillcet",
+    link: "/skillcet",
   },
   {
     key: 11,

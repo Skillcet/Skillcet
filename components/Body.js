@@ -34,6 +34,7 @@ function Body({
               {data?.map((object) => {
                 return (
                   <Post
+                    key={object._id}
                     title={object.Title}
                     subTitle={object.SubTitle}
                     time={object.updatedAt}
