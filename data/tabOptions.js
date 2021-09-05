@@ -313,7 +313,7 @@ export {
   XTabOptions,
   XIITabOptions,
   graduationTabOptions,
-  FreeResources,
+  FreeResourcesTabOptions,
   MaterialTabOptions,
   TestsTabOptions,
   NewBatchesTabOptions,
