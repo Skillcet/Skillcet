@@ -6,6 +6,7 @@
 }
 
 //Marquee tool
+
 .marquee-container::before {
   background: transparent;
 }

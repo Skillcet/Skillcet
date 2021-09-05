@@ -12,28 +12,26 @@ const marqueeItems = [
   "Second",
 ];
 
-function WidgetBar() {
+function WidgetBar({ widgetData }) {
+  const JobAlertsData = widgetData
+    .filter((option) => option.WidgetOptions == "JobAlerts")[0]
+    .Points.map((point) => <li key={point._id}>{point.ThePoint}</li>);
+  const NewBatchesData = widgetData
+    .filter((option) => option.WidgetOptions == "NewBatches")[0]
+    .Points.map((point) => <li key={point._id}>{point.ThePoint}</li>);
+  const TestMarketingData = widgetData
+    .filter((option) => option.WidgetOptions == "TestMarketing")[0]
+    .Points.map((point) => <li key={point._id}>{point.ThePoint}</li>);
+
   return (
     <div className="w-full">
-      {/* Notifications */}
-      <div className="mb-3">
-        <div className=" bg-blue-100 w-full pb-4">
-          <h1 className="pt-2 text-center">Notifications</h1>
-          <hr className="border-t-w-[2px] border-black w-11/12 mx-auto my-2" />
-          <Marquee
-            marqueeItems={marqueeItems}
-            marqueeClassName="text-sm"
-            marqueeContainerClassName="w-11/12 mx-auto min-h-full"
-          />
-        </div>
-      </div>
       {/* Job Alerts */}
       <div className="my-3">
         <div className=" bg-blue-100 w-full pb-4">
           <h1 className="pt-2 text-center">Job Alerts</h1>
           <hr className="border-t-w-[2px] border-black w-11/12 mx-auto my-2" />
           <Marquee
-            marqueeItems={marqueeItems}
+            marqueeItems={JobAlertsData}
             marqueeClassName="text-sm"
             marqueeContainerClassName="w-11/12 mx-auto min-h-full"
           />
@@ -45,7 +43,7 @@ function WidgetBar() {
           <h1 className="pt-2 text-center">New Batches</h1>
           <hr className="border-t-w-[2px] border-black w-11/12 mx-auto my-2" />
           <Marquee
-            marqueeItems={marqueeItems}
+            marqueeItems={NewBatchesData}
             marqueeClassName="text-sm"
             marqueeContainerClassName="w-11/12 mx-auto min-h-full"
           />
@@ -64,7 +62,7 @@ function WidgetBar() {
           <h1 className="pt-2 text-center">test Marketing</h1>
           <hr className="border-t-w-[2px] border-black w-11/12 mx-auto my-2" />
           <Marquee
-            marqueeItems={marqueeItems}
+            marqueeItems={TestMarketingData}
             marqueeClassName="text-sm"
             marqueeContainerClassName="w-11/12 mx-auto min-h-full"
           />

@@ -4,8 +4,15 @@ import Post from "../components/Post";
 import Menu from "../components/Menu";
 import TabSelector from "./TabSelector";
 import WidgetBar from "./WidgetBar";
-function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
-  console.log(tabData);
+function Body({
+  data,
+  widgetData,
+  banner,
+  tabOption,
+  tabData,
+  tabNames,
+  isOpen,
+}) {
   return (
     <div className="mb-14 md:mb-0 md:mr-8 3xl:mr-0 mx-auto">
       <div
@@ -29,9 +36,10 @@ function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
                   <Post
                     title={object.Title}
                     subTitle={object.SubTitle}
-                    time="5 hours ago."
+                    time={object.updatedAt}
                     points={object.Points}
                     picture={object.PostPicture.url}
+                    alt={object.alternativeText}
                   />
                 );
               })}
@@ -41,7 +49,7 @@ function Body({ data, banner, tabOption, tabData, tabNames, isOpen }) {
         </div>
         {/* Widgets */}
         <div className={`hidden md:inline-flex col-span-1 h-40`}>
-          <WidgetBar />
+          <WidgetBar widgetData={widgetData} />
         </div>
       </div>
     </div>

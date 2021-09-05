@@ -1,8 +1,13 @@
 import Layout from "../components/layout";
-import Body from "../components/Body";
-import Post from "../components/Post";
-export default function Home({ data }) {
-  return <Layout pageTitle="Home" banner="true" data={data}></Layout>;
+export default function Home({ data, widgetData }) {
+  return (
+    <Layout
+      pageTitle="Home"
+      banner="true"
+      data={data}
+      widgetData={widgetData}
+    ></Layout>
+  );
 }
 
 // export async function getStaticProps() {
@@ -12,14 +17,21 @@ export default function Home({ data }) {
 //     props: { data },
 //   };
 // }
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const res = await fetch(
     `https://mighty-wave-83703.herokuapp.com/homepage-posts`
   );
   const data = await res.json();
+  const res1 = await fetch(
+    `https://mighty-wave-83703.herokuapp.com/notifications`
+  );
+
+  // `https://mighty-wave-83703.herokuapp.com/nra-posts?_sort=Tab:ASC`
+
+  const widgetData = await res1.json();
 
   return {
-    props: { data }, // will be passed to the page component as props
+    props: { data, widgetData }, // will be passed to the page component as props
     revalidate: 10,
   };
 }

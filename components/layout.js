@@ -11,6 +11,7 @@ export default function Layout({
   tabData,
   tabNames,
   data,
+  widgetData,
 }) {
   const [isOpen, SetIsOpen] = useState(1);
   return (
@@ -27,6 +28,7 @@ export default function Layout({
         tabNames={tabNames}
         tabData={tabData}
         data={data}
+        widgetData={widgetData}
       />
       <main>{children}</main>
       <MobileHeader />

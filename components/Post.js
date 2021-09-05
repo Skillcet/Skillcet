@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Expand from "react-expand-animated";
 import Image from "next/image";
+import moment from "moment";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function Post({ title, time, subTitle, points, picture, alt }) {
@@ -9,6 +10,34 @@ function Post({ title, time, subTitle, points, picture, alt }) {
       {point.ThePoint}
     </li>
   ));
+  var time1 = "just now.";
+  var timeToday = new moment();
+  var timePost = moment(time);
+  var timeDiff = moment.duration(timeToday.diff(timePost))._data;
+
+  if (timeDiff.years > 0) {
+    timeDiff.years > 1
+      ? (time1 = `${timeDiff.years} years ago.`)
+      : (time1 = `${timeDiff.years} year ago.`);
+  } else if (timeDiff.months > 0) {
+    timeDiff.months > 1
+      ? (time1 = `${timeDiff.months} months ago.`)
+      : (time1 = `${timeDiff.months} month ago.`);
+  } else if (timeDiff.days > 0) {
+    timeDiff.days > 1
+      ? (time1 = `${timeDiff.days} days ago.`)
+      : (time1 = `${timeDiff.days} day ago.`);
+  } else if (timeDiff.hours > 0) {
+    timeDiff.hours > 1
+      ? (time1 = `${timeDiff.hours} hours ago.`)
+      : (time1 = `${timeDiff.hours} hour ago.`);
+  } else if (timeDiff.minutes > 0) {
+    timeDiff.minutes > 1
+      ? (time1 = `${timeDiff.minutes} minutes ago.`)
+      : (time1 = `${timeDiff.minutes} minute ago.`);
+  } else {
+    time1 = "Just Now";
+  }
 
   const [isExpanded, setIsExpanded] = useState(false);
   return (
@@ -28,9 +57,9 @@ function Post({ title, time, subTitle, points, picture, alt }) {
                 {title}
               </h3>
             </div>
-            {/* SubTitle */}
+            {/* Time */}
             <div className="my-2">
-              <p className="text-gray-500 text-xs">{time}</p>
+              <p className="text-gray-500 text-xs">{time1}</p>
             </div>
             {/* First point */}
             <div className="text-customLightGray hidden sm:inline text-xs lg:text-sm font-semibold">

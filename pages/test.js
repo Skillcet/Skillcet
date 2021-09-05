@@ -1,38 +1,21 @@
-import { Tab } from "@headlessui/react";
+import React from "react";
 
-export default function MyTabs() {
-  return (
-    <div className="w-1/2 mx-auto">
-      <Tab.Group defaultIndex="0">
-        <Tab.List className="w-full  bg-gray-700 py-2 px-7 flex justify-between text-white">
-          <Tab
-            className={({ selected }) =>
-              selected ? "bg-blue-500 text-white" : "bg-white text-black"
-            }
-          >
-            Tab 1
-          </Tab>
-          <Tab
-            className={({ selected }) =>
-              selected ? "bg-blue-500 text-white" : "bg-white text-black"
-            }
-          >
-            Tab 2
-          </Tab>
-          <Tab
-            className={({ selected }) =>
-              selected ? "bg-blue-500 text-white" : "bg-white text-black"
-            }
-          >
-            Tab 3
-          </Tab>
-        </Tab.List>
-        <Tab.Panels>
-          <Tab.Panel>Content 1</Tab.Panel>
-          <Tab.Panel>Content 2</Tab.Panel>
-          <Tab.Panel>Content 3</Tab.Panel>
-        </Tab.Panels>
-      </Tab.Group>
-    </div>
-  );
+function test({ data }) {
+  var n = new Date(data[0].createdAt).getFullYear();
+  var today = new Date();
+  console.log([n, today]);
+  return <div>{data[0].createdAt}</div>;
+}
+
+export default test;
+export async function getStaticProps() {
+  const res = await fetch(`https://mighty-wave-83703.herokuapp.com/nra-posts`);
+
+  // `https://mighty-wave-83703.herokuapp.com/nra-posts?_sort=Tab:ASC`
+  const data = await res.json();
+
+  return {
+    props: { data }, // will be passed to the page component as props
+    revalidate: 10,
+  };
 }
