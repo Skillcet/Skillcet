@@ -1,9 +1,9 @@
 import Layout from "../components/layout";
-import { nraTabOptions } from "../data/tabOptions";
+import { NewBatchesTabOptions } from "../data/tabOptions";
 import { Tab } from "@headlessui/react";
 import Post from "../components/Post";
 
-const tabNames = nraTabOptions.map((option) => (
+const tabNames = NewBatchesTabOptions.map((option) => (
   <Tab
     key={option.key}
     className={({ selected }) =>
