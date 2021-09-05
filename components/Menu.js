@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 function Menu() {
   const router = useRouter();
+  console.log(router.pathname);
   const menuItems = menuOptions.map((item) => (
     <div
       className={`hover:text-blue-700 pl-14 text-base 3xl:text-[20px]

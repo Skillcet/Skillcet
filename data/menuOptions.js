@@ -42,7 +42,7 @@ const menuOptions = [
   {
     key: 9,
     name: "New Batches",
-    link: "newbatches",
+    link: "/newbatches",
   },
   {
     key: 10,
