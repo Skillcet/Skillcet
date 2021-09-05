@@ -7,7 +7,7 @@ const menuOptions = [
   {
     key: 2,
     name: "Graduate Level",
-    link: "/graduatelevel",
+    link: "/GraduateLevel",
   },
   {
     key: 3,
