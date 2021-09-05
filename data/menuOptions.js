@@ -32,17 +32,17 @@ const menuOptions = [
   {
     key: 7,
     name: "Material",
-    link: "/Material",
+    link: "/material",
   },
   {
     key: 8,
     name: "Tests",
-    link: "/Tests",
+    link: "/tests",
   },
   {
     key: 9,
     name: "New Batches",
-    link: "NewBatches",
+    link: "newbatches",
   },
   {
     key: 10,
@@ -52,12 +52,12 @@ const menuOptions = [
   {
     key: 11,
     name: "Facilities",
-    link: "/Facilities",
+    link: "/facilities",
   },
   {
     key: 12,
     name: "Our Branches",
-    link: "/OurBranches",
+    link: "/ourbranches",
   },
   {
     key: 13,
