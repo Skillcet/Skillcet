@@ -243,7 +243,7 @@ const FacilitiesTabOptions = [
 const OurBranchesTabOptions = [
   {
     key: 1,
-    title: "Dlishukhnagar",
+    title: "Dilshukhnagar",
   },
   {
     key: 2,
