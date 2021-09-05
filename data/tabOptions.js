@@ -108,7 +108,7 @@ const TierIITabOptions = [
     title: "OTHERS",
   },
 ];
-const FreeResources = [
+const FreeResourcesTabOptions = [
   {
     key: 1,
     title: "Daily Quiz",
