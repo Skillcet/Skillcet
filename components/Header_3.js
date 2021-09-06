@@ -6,7 +6,7 @@ import { MenuIcon, AccountIcon } from "../data/svgs";
 import { SearchIcon } from "@heroicons/react/solid";
 function Header_2({ isOpen, SetIsOpen }) {
   return (
-    <header className="header sticky top-0 z-50 h-[64px] w-full shadow-md text-base 3xl:text-lg">
+    <header className="header sticky top-0 z-50 h-[64px] w-full shadow-md text-base 4xl:text-lg bg-white">
       <div className="p-2  h-full">
         <div className="flex h-full items-center">
           {/* Menu Icon */}
@@ -18,7 +18,7 @@ function Header_2({ isOpen, SetIsOpen }) {
             <img src="/logo.svg" alt="LOGO" className="h-full w-[131.1183px]" />
           </div>
           {/* Links */}
-          <div className="ml-10">
+          <div className="ml-10 hidden xl:inline-flex">
             <div className="w-full h-full flex items-center">
               <div className="">National Recruitement Agency</div>
               <div className="ml-8">SkillCET</div>
@@ -36,7 +36,7 @@ function Header_2({ isOpen, SetIsOpen }) {
           </div>
           <div className="mr-8 ml-10 3xl:flex-1">
             <div className="flex items-center h-full w-full justify-end">
-              <div className="mr-8">Student Login</div>
+              <div className="mr-8 hidden md:inline-flex">Student Login</div>
               <div className="">
                 <AccountIcon className="h-6 w-6 text-gray-500 cursor-pointer" />
               </div>
