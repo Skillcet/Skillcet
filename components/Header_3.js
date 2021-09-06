@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "../public/logo.svg";
 import { MenuIcon, AccountIcon } from "../data/svgs";
 import { SearchIcon } from "@heroicons/react/solid";
 function Header_2({ isOpen, SetIsOpen }) {
@@ -16,9 +19,23 @@ function Header_2({ isOpen, SetIsOpen }) {
             </button>
           </div>
           {/* Logo */}
-          <div className="md:ml-8">
-            <img src="/logo.svg" alt="LOGO" height={48} width={132} />
+          <div className=" relative h-[20px] w-[80px] sm:h-[34px] sm:w-[131px] flex items-center ml-8">
+            <Link href="/">
+              <a>
+                <Image
+                  src={Logo}
+                  objectFit="contain"
+                  objectPosition="left"
+                  layout="fill"
+                />
+              </a>
+            </Link>
           </div>
+
+          {/*<div className="md:ml-8">
+            <img src="/logo.svg" alt="LOGO" height={48} width={132} />
+          </div> */}
+
           {/* Links */}
           <div className="ml-10 hidden xl:inline-flex">
             <div className="w-full h-full flex items-center">
