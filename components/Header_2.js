@@ -26,6 +26,7 @@ function Header_2({ isOpen, SetIsOpen }) {
                 <a>
                   <Image
                     src={Logo}
+                    alt="Logo"
                     objectFit="contain"
                     objectPosition="left"
                     layout="fill"
