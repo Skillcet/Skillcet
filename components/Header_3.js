@@ -10,11 +10,8 @@ function Header_2({ isOpen, SetIsOpen }) {
       <div className="p-2  h-full">
         <div className="flex h-full items-center">
           {/* Menu Icon */}
-          <div className="ml-8">
-            <button
-              onClick={() => SetIsOpen(!isOpen)}
-              className="hidden lg:inline-flex "
-            >
+          <div className="ml-8 hidden lg:inline-flex ">
+            <button onClick={() => SetIsOpen(!isOpen)} className="">
               <MenuIcon className="text-gray-600 h-6 w-6" />
             </button>
           </div>
