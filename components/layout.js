@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/Header_3";
+import Header from "../components/Header_2";
 import MobileHeader from "../components/MobileHeader";
 import Body from "../components/Body";
 import { useState } from "react";

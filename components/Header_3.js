@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { MenuIcon, AccountIcon } from "../data/svgs";
 import { SearchIcon } from "@heroicons/react/solid";
 function Header_2({ isOpen, SetIsOpen }) {
