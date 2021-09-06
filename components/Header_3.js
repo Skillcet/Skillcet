@@ -11,7 +11,12 @@ function Header_2({ isOpen, SetIsOpen }) {
         <div className="flex h-full items-center">
           {/* Menu Icon */}
           <div className="ml-8">
-            <MenuIcon className="text-gray-600 h-6 w-6" />
+            <button
+              onClick={() => SetIsOpen(!isOpen)}
+              className="hidden lg:inline-flex "
+            >
+              <MenuIcon className="text-gray-600 h-6 w-6" />
+            </button>
           </div>
           {/* Logo */}
           <div className="ml-8">
