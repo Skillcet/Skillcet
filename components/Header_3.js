@@ -19,7 +19,7 @@ function Header_2({ isOpen, SetIsOpen }) {
             </button>
           </div>
           {/* Logo */}
-          <div className="ml-8">
+          <div className="md:ml-8">
             <img src="/logo.svg" alt="LOGO" className="h-full w-[131.1183px]" />
           </div>
           {/* Links */}
