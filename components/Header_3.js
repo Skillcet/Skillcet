@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Logo from "../public/logo.svg";
 import { MenuIcon, AccountIcon } from "../data/svgs";
 import { SearchIcon } from "@heroicons/react/solid";
 function Header_2({ isOpen, SetIsOpen }) {
@@ -20,7 +17,7 @@ function Header_2({ isOpen, SetIsOpen }) {
           </div>
           {/* Logo */}
           <div className="md:ml-8">
-            <img src="/logo.svg" alt="LOGO" className="h-full w-[131.1183px]" />
+            <img src="/logo.svg" alt="LOGO" className="h-12 w-[131.1183px]" />
           </div>
           {/* Links */}
           <div className="ml-10 hidden xl:inline-flex">
@@ -39,6 +36,7 @@ function Header_2({ isOpen, SetIsOpen }) {
               className="bg-transparent border-none w-full outline-none pr-6"
             />
           </div>
+          {/* Student Login */}
           <div className="mr-8 ml-10 3xl:flex-1">
             <div className="flex items-center h-full w-full justify-end">
               <div className="mr-8 hidden md:inline-flex">Student Login</div>
@@ -47,9 +45,6 @@ function Header_2({ isOpen, SetIsOpen }) {
               </div>
             </div>
           </div>
-
-          {/* Student Login */}
-          {/* Student Icon */}
         </div>
       </div>
     </header>
