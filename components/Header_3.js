@@ -6,7 +6,7 @@ import { MenuIcon, AccountIcon } from "../data/svgs";
 import { SearchIcon } from "@heroicons/react/solid";
 function Header_2({ isOpen, SetIsOpen }) {
   return (
-    <header className="header sticky top-0 z-50 h-[64px] w-full shadow-md  text-base">
+    <header className="header sticky top-0 z-50 h-[64px] w-full shadow-md text-base 3xl:text-lg">
       <div className="p-2  h-full">
         <div className="flex h-full items-center">
           {/* Menu Icon */}
@@ -34,7 +34,7 @@ function Header_2({ isOpen, SetIsOpen }) {
               className="bg-transparent border-none w-full outline-none pr-6"
             />
           </div>
-          <div className="mr-8 ml-10 flex-1">
+          <div className="mr-8 ml-10 3xl:flex-1">
             <div className="flex items-center h-full w-full justify-end">
               <div className="mr-8">Student Login</div>
               <div className="">
