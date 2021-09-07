@@ -16,7 +16,7 @@ function Body({
   return (
     <div className="mb-14 md:mb-0 md:mr-8 3xl:mr-0 mx-auto">
       <div
-        className={`hidden lg:inline-flex hover:shadow-lg fixed w-72 pr-2 border-r top-12 sm:top-16 md:top-18 bg-white z-10  overflow-x-hidden overflow-y-auto menuheight transform ${
+        className={`hidden lg:inline-flex hover:shadow-lg fixed w-[301px] border-r top-12 sm:top-16 md:top-18 bg-white z-10 overflow-x-hidden overflow-y-auto menuheight transform ${
           isOpen
             ? "translate-x-0 ease-out transition duration-200"
             : "-translate-x-full ease-in transition duration-200"
