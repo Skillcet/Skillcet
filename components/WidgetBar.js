@@ -26,7 +26,7 @@ function WidgetBar({ widgetData }) {
   return (
     <div className="w-full">
       {/* Job Alerts */}
-      <div className="my-3">
+      <div className="mb-3">
         <div className=" bg-blue-100 w-full pb-4">
           <h1 className="pt-2 text-center">Job Alerts</h1>
           <hr className="border-t-w-[2px] border-black w-11/12 mx-auto my-2" />

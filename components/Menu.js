@@ -8,19 +8,19 @@ function Menu() {
 
   const menuItems = menuOptions.map((item) => (
     <div
-      className={`mb-4 pl-10 text-base flex items-center border-2 border-blue-500
+      className={`mb-4 pl-8 text-base flex items-center pr-8
       ${
         router.pathname == item.link
-          ? "bg-primaryBlue1 rounded-r-3xl px-5  text-white "
+          ? "bg-primaryBlue1 rounded-r-3xl text-white"
           : " hover:text-primaryBlue1"
       }
       `}
       key={item.key}
     >
-      <MenuIcon className="h-5 w-5" />
+      <MenuIcon className="h-5 w-5 mr-2" />
       <Link href={item.link}>
         <a
-          className="w-full inline-flex "
+          className="inline-flex "
           style={{
             paddingTop: "8px",
             paddingBottom: "8px",
@@ -33,10 +33,10 @@ function Menu() {
   ));
   return (
     <div className="bg-white w-full text-sm md:text-base h-full ">
-      <div className="h-60 w-full my-6 bg-green-200 border-2 border-black"></div>
+      <div className="h-[185px] w-[265px] mx-auto my-6 bg-green-200 "></div>
       <div className="  mx-auto ">
         <hr className=" w-4/5 mx-auto border-secondaryBlue1 " />
-        <div className=" mt-6 ">{menuItems}</div>
+        <div className=" mt-4 ">{menuItems}</div>
       </div>
     </div>
   );
