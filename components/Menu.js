@@ -1,4 +1,5 @@
 import React from "react";
+import { MenuIcon } from "../data/svgs";
 import menuOptions from "../data/menuOptions";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -7,7 +8,7 @@ function Menu() {
 
   const menuItems = menuOptions.map((item) => (
     <div
-      className={` mb-4 pl-14 text-base 3xl:text-[20px]
+      className={`mb-4 pl-10 text-base flex items-center border-2 border-blue-500
       ${
         router.pathname == item.link
           ? "bg-primaryBlue1 rounded-r-3xl px-5  text-white "
@@ -16,9 +17,10 @@ function Menu() {
       `}
       key={item.key}
     >
+      <MenuIcon className="h-5 w-5" />
       <Link href={item.link}>
         <a
-          className="w-full inline-flex"
+          className="w-full inline-flex "
           style={{
             paddingTop: "8px",
             paddingBottom: "8px",
