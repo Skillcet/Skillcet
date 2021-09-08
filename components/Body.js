@@ -12,6 +12,7 @@ function Body({
   tabData,
   tabNames,
   isOpen,
+  topPicture,
 }) {
   return (
     <div className="mb-14 md:mb-0 mx-auto">
@@ -22,7 +23,7 @@ function Body({
             : "-translate-x-full ease-in transition duration-200"
         }  `}
       >
-        <Menu />
+        <Menu topPicture={topPicture} />
       </div>
       {/* Body */}
       <div className="md:flex align-top grid grid-cols-1 mx-auto mt-6 max-w-screen-xl lg:ml-[308px] 3xl:mx-auto">

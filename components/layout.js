@@ -12,6 +12,7 @@ export default function Layout({
   tabNames,
   data,
   widgetData,
+  topPicture,
 }) {
   const [isOpen, SetIsOpen] = useState(1);
   return (
@@ -29,6 +30,7 @@ export default function Layout({
         tabData={tabData}
         data={data}
         widgetData={widgetData}
+        topPicture={topPicture}
       />
       <main>{children}</main>
       <MobileHeader />

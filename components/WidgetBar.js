@@ -1,17 +1,6 @@
 import React from "react";
 import Marquee from "react-marquee-master";
 
-const marqueeItems = [
-  "First",
-  "First",
-  "First",
-  "First",
-  "First",
-  "Second",
-  "Second",
-  "Second",
-];
-
 function WidgetBar({ widgetData }) {
   const JobAlertsData = widgetData
     .filter((option) => option.WidgetOptions == "JobAlerts")[0]

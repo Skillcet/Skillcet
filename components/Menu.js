@@ -3,12 +3,12 @@ import { MenuIcon } from "../data/svgs";
 import menuOptions from "../data/menuOptions";
 import { useRouter } from "next/router";
 import Link from "next/link";
-function Menu() {
+function Menu({ topPicture }) {
   const router = useRouter();
 
   const menuItems = menuOptions.map((item) => (
     <div
-      className={`mb-4 pl-8 text-base flex items-center pr-8
+      className={`mb-4 text-base flex items-center
       ${
         router.pathname == item.link
           ? "bg-primaryBlue1 rounded-r-3xl text-white"
@@ -17,25 +17,31 @@ function Menu() {
       `}
       key={item.key}
     >
-      <MenuIcon className="h-5 w-5 mr-2" />
       <Link href={item.link}>
         <a
-          className="inline-flex "
+          className="inline-flex w-full"
           style={{
             paddingTop: "8px",
             paddingBottom: "8px",
+            width: "100%",
           }}
         >
-          {item.name}
+          <div className="flex px-8">
+            <MenuIcon className="h-5 w-5 mr-2" />
+            {item.name}
+          </div>
         </a>
       </Link>
     </div>
   ));
   return (
     <div className="bg-white w-full text-sm md:text-base h-full ">
-      <div className="h-[185px] w-[265px] mx-auto my-6 bg-green-200 "></div>
+      {topPicture && (
+        <div className="h-[185px] w-[265px] mx-auto my-6 bg-green-200 "></div>
+      )}
+
       <div className="  mx-auto ">
-        <hr className=" w-4/5 mx-auto border-secondaryBlue1 " />
+        {topPicture && <hr className=" w-4/5 mx-auto border-secondaryBlue1 " />}
         <div className=" mt-4 ">{menuItems}</div>
       </div>
     </div>

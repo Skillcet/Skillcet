@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 function Banner() {
   return (
     <div className="h-[185px] rounded-lg border-2 flex items-center justify-around w-full shadow-sm mb-3 bg-white mx-auto">

@@ -6,6 +6,7 @@ export default function Home({ data, widgetData }) {
       banner="true"
       data={data}
       widgetData={widgetData}
+      topPicture={1}
     ></Layout>
   );
 }
