@@ -37,9 +37,15 @@ function Header_2({ isOpen, SetIsOpen }) {
           {/* Links */}
           <div className="ml-10 hidden xl:inline-flex">
             <div className="w-full h-full flex items-center">
-              <div className="">National Recruitement Agency</div>
-              <div className="ml-8">SkillCET</div>
-              <div className="ml-8">New Batches</div>
+              <div className="hover:text-primaryBlue1">
+                <Link href="/nra">National Recruitement Agency</Link>
+              </div>
+              <div className="ml-8 hover:text-primaryBlue1">
+                <Link href="/skillcet">SkillCET</Link>
+              </div>
+              <div className="ml-8 hover:text-primaryBlue1">
+                <Link href="/newbatches">New Batches</Link>
+              </div>
             </div>
           </div>
           {/* SearchBar */}
