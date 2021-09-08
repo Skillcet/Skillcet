@@ -37,7 +37,7 @@ function Menu({ topPicture }) {
   return (
     <div className="bg-white w-full text-sm md:text-base h-full ">
       {topPicture && (
-        <div className="h-[185px] w-[265px] mx-auto my-6 bg-green-200 "></div>
+        <div className="h-[185px] w-[265px] mx-auto my-6 bg-green-200 rounded-lg"></div>
       )}
 
       <div className="  mx-auto ">
