@@ -1,9 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import BannerImage from "../public/bannerImage.png";
 function Banner() {
   return (
-    <div className="h-[185px] rounded-lg border-2 flex items-center justify-around w-full shadow-sm mb-3 bg-white mx-auto">
-      <p>Banner</p>
+    <div className=" h-[130px] sm:h-[185px] rounded-lg flex items-center justify-around w-full shadow-sm mb-3 bg-white mx-auto relative">
+      <Image
+        src={BannerImage}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        className="rounded-lg"
+      ></Image>
     </div>
   );
 }
