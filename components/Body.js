@@ -26,10 +26,10 @@ function Body({
         <Menu topPicture={topPicture} />
       </div>
       {/* Body */}
-      <div className="align-top grid grid-cols-1 mx-auto mt-6 max-w-[1176px] lg:ml-[281px] 3xl:mx-auto ">
-        <div className=" sm_1:grid sm_1:grid-cols-12 sm_1:gap-8 sm_1:mx-[22px]">
+      <div className="align-top grid grid-cols-1 mx-auto mt-6 max-w-[1128px] lg:ml-[300px] 3xl:mx-auto lg:mx-6">
+        <div className=" sm_1:grid sm_1:grid-cols-12 sm_1:gap-8">
           {/* Feed */}
-          <div className="h-full w-full sm_1:col-span-8 lg:max-w-[717px] mx-auto ">
+          <div className="h-full w-full sm_1:col-span-8 ">
             {banner && <Banner />}
             {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
             {!tabOption && data && (
