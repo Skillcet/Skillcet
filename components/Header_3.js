@@ -49,7 +49,7 @@ function Header_2({ isOpen, SetIsOpen }) {
             </div>
           </div>
           {/* SearchBar */}
-          <div className="flex flex-1 h-full items-center bg-customSearchBar text-gray max-w-[720px] sm:py-3 ml-6 rounded-xl">
+          <div className="flex flex-1 h-full items-center bg-customSearchBar text-gray max-w-[720px] sm:py-3 ml-6 rounded-lg">
             <SearchIcon className="h-6 px-3 sm:px-6" />
             <input
               type="text"

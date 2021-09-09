@@ -17,7 +17,7 @@ function Body({
   return (
     <div className="mb-14 md:mb-0 mx-auto">
       <div
-        className={`hidden lg:inline-flex hover:shadow-lg fixed w-[280px] border-r top-12 sm:top-16 md:top-18 bg-white z-10 overflow-x-hidden overflow-y-auto menuheight transform ${
+        className={`hidden lg:inline-flex fixed w-[280px] top-12 sm:top-16 md:top-18 bg-white z-10 overflow-x-hidden overflow-y-auto menuheight transform ${
           isOpen
             ? "translate-x-0 ease-out transition duration-200"
             : "-translate-x-full ease-in transition duration-200"
@@ -26,7 +26,7 @@ function Body({
         <Menu topPicture={topPicture} />
       </div>
       {/* Body */}
-      <div className="mx-2 align-top grid grid-cols-1 mt-6 max-w-[1128px] lg:ml-[300px] 3xl:mx-auto lg:mx-6">
+      <div className="mx-2 align-top grid grid-cols-1 mt-6 max-w-[1128px] lg:ml-[304px] 3xl:mx-auto lg:mx-6">
         <div className=" sm_1:grid sm_1:grid-cols-12 sm_1:gap-8">
           {/* Feed */}
           <div className="h-full w-full sm_1:col-span-8 ">
