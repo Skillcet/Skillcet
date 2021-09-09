@@ -37,20 +37,20 @@ function Header_2({ isOpen, SetIsOpen }) {
           {/* Links */}
           <div className="ml-6 hidden xl:inline-flex">
             <div className="w-full h-full flex items-center">
-              <div className="hover:text-primaryBlue1">
+              <div className="hover:text-primaryBlue1 text-customGray">
                 <Link href="/nra">National Recruitement Agency</Link>
               </div>
-              <div className="ml-8 hover:text-primaryBlue1">
+              <div className="ml-8 hover:text-primaryBlue1 text-customGray">
                 <Link href="/skillcet">SkillCET</Link>
               </div>
-              <div className="ml-8 hover:text-primaryBlue1">
+              <div className="ml-8 hover:text-primaryBlue1 text-customGray">
                 <Link href="/newbatches">New Batches</Link>
               </div>
             </div>
           </div>
           {/* SearchBar */}
           <div className="flex flex-1 h-full items-center bg-customSearchBar text-gray max-w-[720px] sm:py-3 ml-6 rounded-lg">
-            <SearchIcon className="h-6 px-3 sm:px-6" />
+            <SearchIcon className="h-6 px-3 sm:px-6 text-gray-600" />
             <input
               type="text"
               placeholder="Search for anything"

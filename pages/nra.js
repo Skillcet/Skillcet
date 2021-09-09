@@ -7,9 +7,7 @@ const tabNames = nraTabOptions.map((option) => (
   <Tab
     key={option.key}
     className={({ selected }) =>
-      selected
-        ? "bg-blue-600 font-semibold h-full w-1/5 py-2"
-        : "w-1/5 font-semibold"
+      selected ? "h-full w-1/5 py-[6px]" : "w-1/5 py-[6px]"
     }
   >
     {option.title}
