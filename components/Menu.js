@@ -8,7 +8,7 @@ function Menu({ topPicture }) {
 
   const menuItems = menuOptions.map((item) => (
     <div
-      className={`mb-4 text-base flex items-center
+      className={`mb-4 text-sm flex items-center
       ${
         router.pathname == item.link
           ? "bg-primaryBlue1 rounded-r-3xl text-white"
@@ -35,7 +35,7 @@ function Menu({ topPicture }) {
     </div>
   ));
   return (
-    <div className="bg-white w-full text-sm md:text-base h-full ">
+    <div className="bg-white w-full text-sm h-full ">
       {topPicture && (
         <div className="h-[185px] w-[265px] mx-auto my-6 bg-green-200 rounded-lg"></div>
       )}

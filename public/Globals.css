@@ -4,6 +4,10 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+@font-face {
+  font-family: "MyWebFont";
+  src: url("product-font.ttf");
+}
 
 //Marquee tool
 
@@ -31,11 +35,11 @@ html {
 body {
   background-color: white;
   margin: 0;
-  font-family: "Cabin", sans-serif;
+  font-family: "MyWebFont", sans-serif;
 }
 
 .header {
-  font-family: "Cabin", sans-serif;
+  font-family: "MyWebFont", sans-serif;
 }
 
 .shadow-mobile-footer {
