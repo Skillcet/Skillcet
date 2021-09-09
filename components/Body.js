@@ -26,7 +26,7 @@ function Body({
         <Menu topPicture={topPicture} />
       </div>
       {/* Body */}
-      <div className="align-top grid grid-cols-1 mx-auto mt-6 max-w-[1128px] lg:ml-[300px] 3xl:mx-auto lg:mx-6">
+      <div className="mx-2 align-top grid grid-cols-1 mt-6 max-w-[1128px] lg:ml-[300px] 3xl:mx-auto lg:mx-6">
         <div className=" sm_1:grid sm_1:grid-cols-12 sm_1:gap-8">
           {/* Feed */}
           <div className="h-full w-full sm_1:col-span-8 ">
