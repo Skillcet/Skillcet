@@ -7,7 +7,7 @@ import { SearchIcon } from "@heroicons/react/solid";
 function Header_2({ isOpen, SetIsOpen }) {
   return (
     <header className="header sticky top-0 z-50 h-[64px] w-full shadow-md text-base 4xl:text-lg bg-white">
-      <div className="p-3 sm:p-2  h-full">
+      <div className="py-3 sm:py-2  h-full">
         <div className="flex h-full items-center">
           {/* Menu Icon */}
           <div className="ml-6 hidden lg:inline-flex ">

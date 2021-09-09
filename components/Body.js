@@ -26,33 +26,35 @@ function Body({
         <Menu topPicture={topPicture} />
       </div>
       {/* Body */}
-      <div className="md:flex align-top grid grid-cols-1 mx-auto mt-6 max-w-screen-xl lg:ml-[308px] 3xl:mx-auto">
-        {/* Feed */}
-        <div className="h-full w-11/12 lg:w-[717px] lg:mx-8 mx-auto">
-          {banner && <Banner />}
-          {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
-          {!tabOption && data && (
-            <div>
-              {data?.map((object) => {
-                return (
-                  <Post
-                    key={object._id}
-                    title={object.Title}
-                    subTitle={object.SubTitle}
-                    time={object.updatedAt}
-                    points={object.Points}
-                    picture={object.PostPicture.url}
-                    alt={object.alternativeText}
-                  />
-                );
-              })}
-            </div>
-          )}
-          {/* Footer */}
-        </div>
-        {/* Widgets */}
-        <div className={`hidden md:inline-flex w-[265px] `}>
-          <WidgetBar widgetData={widgetData} />
+      <div className="align-top grid grid-cols-1 mx-auto mt-6 max-w-[1176px] lg:ml-[281px] 3xl:mx-auto ">
+        <div className=" sm_1:grid sm_1:grid-cols-12 sm_1:gap-8 sm_1:mx-[22px]">
+          {/* Feed */}
+          <div className="h-full w-full sm_1:col-span-8 lg:max-w-[717px] mx-auto ">
+            {banner && <Banner />}
+            {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
+            {!tabOption && data && (
+              <div>
+                {data?.map((object) => {
+                  return (
+                    <Post
+                      key={object._id}
+                      title={object.Title}
+                      subTitle={object.SubTitle}
+                      time={object.updatedAt}
+                      points={object.Points}
+                      picture={object.PostPicture.url}
+                      alt={object.alternativeText}
+                    />
+                  );
+                })}
+              </div>
+            )}
+            {/* Footer */}
+          </div>
+          {/* Widgets */}
+          <div className={`hidden sm_1:inline-flex sm_1:col-span-4 `}>
+            <WidgetBar widgetData={widgetData} />
+          </div>
         </div>
       </div>
     </div>
