@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function Post({ title, time, subTitle, points, picture, alt }) {
   const Points = points?.map((point) => (
-    <li className="my-3" key={point._id}>
+    <li className="my-3 expandable-content" key={point._id}>
       {point.ThePoint}
     </li>
   ));
@@ -40,29 +40,30 @@ function Post({ title, time, subTitle, points, picture, alt }) {
   }
 
   const [isExpanded, setIsExpanded] = useState(false);
+  const readmore = ["Read More...", "Read Less..."];
   return (
     <div
       className={`${
         isExpanded ? "" : ""
-      } mx-auto border-[1px] bg-white shadow-sm lg:hover:shadow-md text-customLightGray rounded-lg px-4 pt-4 pb-1 my-4 `}
+      } mx-auto border-[1px] border-customBorderColor bg-white shadow-sm  text-customLightGray rounded-lg px-4 pt-4 pb-1 mb-4 Post`}
     >
       <div className="flex flex-col ">
         {/* Heading,subtitle and image */}
-        <div className=" flex items-center w-full justify-between align-middle">
+        <div className=" flex w-full justify-between items-start">
           {/* Heading and subs */}
           <div className="mr-4 h-auto">
             {/* Title */}
             <div className="h-1/2">
-              <h3 className="text-sm lg:text-base leading-normal font-bold text-customGray">
+              <h3 className="text-sm sm:text-base lg:text-lg leading-normal font-semibold text-customGray">
                 {title}
               </h3>
             </div>
             {/* Time */}
-            <div className="my-2">
+            <div className="mt-2 mb-4">
               <p className="text-gray-500 text-xs">{time1}</p>
             </div>
             {/* First point */}
-            <div className="text-customLightGray hidden sm:inline text-xs lg:text-sm font-semibold">
+            <div className="text-customLightGray hidden sm:inline text-xs lg:text-sm expandable-content">
               <ul className="list-disc list-inside">
                 <li className="mt-1">{subTitle}</li>
               </ul>
@@ -82,13 +83,19 @@ function Post({ title, time, subTitle, points, picture, alt }) {
         </div>
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
-          <ul className="list-disc list-inside text-xs lg:text-sm font-semibold text-customLightGray">
-            <li className="mt-1 sm:hidden">{subTitle}</li>
+          <ul className="list-disc list-inside text-xs lg:text-sm text-customLightGray expandable-content">
+            <li className="mt-1 sm:hidden expandable-content">{subTitle}</li>
             {Points}
           </ul>
         </Expand>
         {/* The Readmore line */}
-        <div className="flex justify-end mt-2">
+        <div className="flex justify-between mt-4">
+          <div
+            className="text-primaryBlue1 cursor-pointer text-xs lg:ml-[20px]"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {!isExpanded ? <div>{readmore[0]}</div> : <div>{readmore[1]}</div>}
+          </div>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className={`${
@@ -106,33 +113,3 @@ function Post({ title, time, subTitle, points, picture, alt }) {
 }
 
 export default Post;
-
-/*<div className={classes.root}>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <div className="flex flex-col">
-            <div>This is Heading</div>
-            <div>This is Summary</div>
-          </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-            amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
-    /* <div className="h-48 rounded-lg flex items-center border-gray-200 border-2 justify-around w-11/12 shadow-md mb-3 bg-white mx-auto">
-      <p>Post</p>
-    </div> */

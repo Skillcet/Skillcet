@@ -28,7 +28,7 @@ function Menu({ topPicture }) {
             width: "100%",
           }}
         >
-          <div className="flex px-6">
+          <div className="flex px-6 items-center">
             <MenuIcon className="h-5 w-5 mr-4" />
             {item.name}
           </div>
