@@ -55,7 +55,7 @@ function Header_2({ isOpen, SetIsOpen }) {
             <input
               type="text"
               placeholder="Search for anything"
-              className="bg-transparent text-xs border-none w-full outline-none pr-6"
+              className="bg-transparent text-xs md:text-base border-none w-full outline-none pr-6"
             />
           </div>
           {/* Student Login */}
