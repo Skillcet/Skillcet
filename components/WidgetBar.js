@@ -6,23 +6,32 @@ function WidgetBar({ widgetData }) {
   const JobAlertsData = widgetData
     .filter((option) => option.WidgetOptions == "JobAlerts")[0]
     .Points.map((point) => (
-      <li className="py-2" key={point._id}>
+      <p
+        className="py-2 list-item list-disc list-outside w-[90%] mx-auto"
+        key={point._id}
+      >
         {point.ThePoint}
-      </li>
+      </p>
     ));
   const NewBatchesData = widgetData
     .filter((option) => option.WidgetOptions == "NewBatches")[0]
     .Points.map((point) => (
-      <li className="py-2" key={point._id}>
+      <p
+        className="py-2 list-item list-disc list-outside w-[90%] mx-auto"
+        key={point._id}
+      >
         {point.ThePoint}
-      </li>
+      </p>
     ));
   const TestMarketingData = widgetData
     .filter((option) => option.WidgetOptions == "TestMarketing")[0]
     .Points.map((point) => (
-      <li className="py-2" key={point._id}>
+      <p
+        className="py-2 list-item list-disc list-outside w-[90%] mx-auto"
+        key={point._id}
+      >
         {point.ThePoint}
-      </li>
+      </p>
     ));
 
   return (
@@ -34,7 +43,7 @@ function WidgetBar({ widgetData }) {
           <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mb-2" />
           <Marquee
             marqueeItems={JobAlertsData}
-            marqueeClassName="text-sm"
+            marqueeClassName="text-sm list-outside"
             marqueeContainerClassName="w-11/12 mx-auto min-h-full"
           />
         </div>
@@ -78,7 +87,7 @@ function WidgetBar({ widgetData }) {
           <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 my-2" />
           <Marquee
             marqueeItems={TestMarketingData}
-            marqueeClassName="text-sm"
+            marqueeClassName="text-sm list-outside w-full"
             marqueeContainerClassName="w-11/12 mx-auto min-h-full"
           />
         </div>

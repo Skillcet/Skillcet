@@ -64,7 +64,7 @@ function Post({ title, time, subTitle, points, picture, alt }) {
             </div>
             {/* First point */}
             <div className="text-customLightGray hidden sm:inline text-xs lg:text-sm expandable-content">
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-outside w-[95%] mx-auto">
                 <li className="mt-1">{subTitle}</li>
               </ul>
             </div>
@@ -83,7 +83,7 @@ function Post({ title, time, subTitle, points, picture, alt }) {
         </div>
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
-          <ul className="list-disc list-inside text-xs lg:text-sm text-customLightGray expandable-content">
+          <ul className="list-disc list-outside w-[95%] mx-auto text-xs lg:text-sm text-customLightGray expandable-content">
             <li className="mt-1 sm:hidden expandable-content">{subTitle}</li>
             {Points}
           </ul>
