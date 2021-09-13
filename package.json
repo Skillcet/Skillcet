@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@brainhubeu/react-carousel": "^2.0.4",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
     "@loadable/component": "^5.15.0",
@@ -21,7 +20,9 @@
     "react-expand-animated": "^1.0.2",
     "react-headless-tabs": "^3.0.1",
     "react-icons": "^4.2.0",
-    "react-marquee-master": "^1.4.5"
+    "react-marquee-master": "^1.4.5",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
