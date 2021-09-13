@@ -17,8 +17,14 @@
 
 // export default Banner;
 import React from "react";
-import Carousel from "@brainhubeu/react-carousel";
+
 import "@brainhubeu/react-carousel/lib/style.css";
+import dynamic from "next/dynamic";
+
+const { default: Carousel, Dots } = dynamic(
+  () => require("@brainhubeu/react-carousel"),
+  { ssr: false }
+);
 
 const Banner = () => (
   <Carousel plugins={["arrows"]}>
