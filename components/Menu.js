@@ -2,6 +2,7 @@ import React from "react";
 import topImage from "../public/topImage.png";
 import { MenuIcon } from "../data/svgs";
 import menuOptions from "../data/menuOptions";
+import Icon from "./Icon";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,7 +30,7 @@ function Menu({ topPicture }) {
           }}
         >
           <div className="flex px-6 items-center">
-            <MenuIcon className="h-5 w-5 mr-4" />
+            <Icon className="h-5 w-5 mr-4 flex items-center" icon={item.icon} />
             {item.name}
           </div>
         </a>
