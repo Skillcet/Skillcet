@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@brainhubeu/react-carousel": "^2.0.4",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
     "@loadable/component": "^5.15.0",

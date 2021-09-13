@@ -4,6 +4,7 @@ import Post from "../components/Post";
 import Menu from "../components/Menu";
 import TabSelector from "./TabSelector";
 import WidgetBar from "./WidgetBar";
+import Footer from "./Footer";
 function Body({
   data,
   widgetData,
@@ -29,7 +30,7 @@ function Body({
       <div className="mx-2 align-top grid grid-cols-1 max-w-[1128px] lg:ml-[304px] 3xl:mx-auto lg:mx-6">
         <div className=" sm_1:grid sm_1:grid-cols-12 sm_1:gap-8">
           {/* Feed */}
-          <div className="h-full w-full sm_1:col-span-8 ">
+          <div className="h-full w-full sm_1:col-span-8 flex flex-col min-h-[90vh]">
             {banner && <Banner />}
             {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
             {!tabOption && data && (
@@ -49,7 +50,8 @@ function Body({
                 })}
               </div>
             )}
-
+            <div className="flex-grow"></div>
+            <Footer />
             {/* Footer */}
           </div>
           {/* Widgets */}
