@@ -11,10 +11,10 @@ function Menu({ topPicture }) {
 
   const menuItems = menuOptions().map((item) => (
     <div
-      className={`mb-4 text-sm flex items-center
+      className={`text-sm flex items-center
       ${
         router.pathname == item.link
-          ? "bg-primaryBlue1 rounded-r-xl text-white"
+          ? "bg-customSearchBar text-primaryBlue1 rounded-r-xl"
           : " hover:text-primaryBlue1"
       }
       `}
@@ -53,7 +53,7 @@ function Menu({ topPicture }) {
 
       <div className="  mx-auto ">
         {topPicture && <hr className=" w-4/5 mx-auto border-secondaryBlue1 " />}
-        <div className=" mt-6 ">{menuItems}</div>
+        <div className="my-4">{menuItems}</div>
       </div>
     </div>
   );
