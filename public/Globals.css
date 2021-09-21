@@ -110,6 +110,26 @@ body {
 .slick-slide {
   padding: 0 5px;
 }
+.slick-dots {
+  bottom: 24px !important;
+}
+.slick-dots > li {
+  margin: 0 !important;
+}
+.slick-dots > li > button::before {
+  color: #2e2e2e !important;
+}
+.list-styling::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #2770ba; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  font-size: 120%;
+  vertical-align: bottom;
+  padding-left: 4px;
+}
 
 @media screen and (max-width: 645px) {
   body {

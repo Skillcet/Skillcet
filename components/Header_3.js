@@ -54,16 +54,16 @@ function Header_2({ isOpen, SetIsOpen }) {
           {/* Links */}
           <div className="ml-6 hidden xl:inline-flex">
             <div className="w-full h-full flex items-center">
-              <div className="hover:text-primaryBlue1 text-customGray">
+              <div className="hover:text-primaryBlue1 text-customHeaderGray">
                 <Link href="/nra">National Recruitement Agency</Link>
               </div>
-              <div className="ml-4 hover:text-primaryBlue1 text-customGray">
+              <div className="ml-4 hover:text-primaryBlue1 text-customHeaderGray">
                 <Link href="/skillcet">SkillCET</Link>
               </div>
-              <div className="ml-4 hover:text-primaryBlue1 text-customGray">
+              <div className="ml-4 hover:text-primaryBlue1 text-customHeaderGray">
                 <Link href="/newbatches">New Batches</Link>
               </div>
-              <div className="ml-4 hover:text-primaryBlue1 text-customGray">
+              <div className="ml-4 hover:text-primaryBlue1 text-customHeaderGray">
                 <Link href="/tests">Tests</Link>
               </div>
             </div>
@@ -82,7 +82,7 @@ function Header_2({ isOpen, SetIsOpen }) {
             <div className="flex items-center h-full w-full justify-end">
               <div className="mr-6 hidden md:inline-flex">
                 <div className="flex items-center justify-between w-full rounded-lg px-2 py-1 border-[0.5px] border-customLightGray ">
-                  <p className="mr-2">Contact Us</p>
+                  <p className="mr-2 text-customHeaderGray">Contact Us</p>
                   {ContactLogo}
                 </div>
               </div>

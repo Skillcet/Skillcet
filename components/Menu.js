@@ -15,7 +15,7 @@ function Menu({ topPicture }) {
       ${
         router.pathname == item.link
           ? "bg-customSearchBar text-primaryBlue1 rounded-r-xl"
-          : " hover:text-primaryBlue1"
+          : " hover:text-primaryBlue1 text-customMenuGray"
       }
       `}
       key={item.key}

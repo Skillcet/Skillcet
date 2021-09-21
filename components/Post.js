@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function Post({ title, time, subTitle, points, picture, alt }) {
   const Points = points?.map((point) => (
-    <li className="my-3 expandable-content" key={point._id}>
+    <li className="my-3 expandable-content list-styling" key={point._id}>
       {point.ThePoint}
     </li>
   ));
@@ -45,7 +45,7 @@ function Post({ title, time, subTitle, points, picture, alt }) {
     <div
       className={`${
         isExpanded ? "" : ""
-      } post mx-auto border-[1px] border-customBorderColor bg-white shadow-sm  text-customLightGray rounded-lg px-4 pt-4 pb-1 mb-4 Post`}
+      } border-[1px] border-customBorderColor bg-white shadow-sm  text-customLightGray rounded-lg px-4 pt-4 pb-1 mb-4 Post mx-[5px]`}
     >
       <div className="flex flex-col ">
         {/* Heading,subtitle and image */}
@@ -64,8 +64,8 @@ function Post({ title, time, subTitle, points, picture, alt }) {
             </div>
             {/* First point */}
             <div className="text-customLightGray hidden sm:inline text-xs lg:text-sm expandable-content">
-              <ul className="list-disc list-outside w-[95%] mx-auto">
-                <li className="mt-1">{subTitle}</li>
+              <ul className="list-none list-outside w-[94%] mx-auto">
+                <li className="mt-1 list-styling">{subTitle}</li>
               </ul>
             </div>
           </div>
@@ -83,8 +83,10 @@ function Post({ title, time, subTitle, points, picture, alt }) {
         </div>
         {/* Expandable content goes here */}
         <Expand open={isExpanded} duration={300}>
-          <ul className="list-disc list-outside w-[95%] mx-auto text-xs lg:text-sm text-customLightGray expandable-content">
-            <li className="mt-1 sm:hidden expandable-content">{subTitle}</li>
+          <ul className="list-none list-outside w-[95%] mx-auto text-xs lg:text-sm text-customLightGray expandable-content">
+            <li className="mt-1 list-styling sm:hidden expandable-content">
+              {subTitle}
+            </li>
             {Points}
           </ul>
         </Expand>

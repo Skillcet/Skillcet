@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       colors: {
         customGray: "#202124",
+        customHeaderGray: "#5f6368",
+        customMenuGray: "#3c4043",
         primaryBlue1: "#2770ba",
         secondaryBlue1: "#4aa3ec",
         customLightGray: "#656666",
