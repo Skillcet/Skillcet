@@ -23,7 +23,7 @@ function Header_2({ isOpen, SetIsOpen }) {
     </svg>
   );
   return (
-    <header className="header sticky top-0 z-50 h-[58px]  md:h-[64px] w-full shadow-md text-base 4xl:text-lg bg-white">
+    <header className="header sticky top-0 z-50 h-[58px]  md:h-[64px] w-full shadow-md text-[15px] 4xl:text-lg bg-white">
       <div className="py-3 sm:py-2  h-full">
         <div className="flex h-full items-center">
           {/* Menu Icon */}
@@ -74,7 +74,7 @@ function Header_2({ isOpen, SetIsOpen }) {
             <input
               type="text"
               placeholder="Search for anything"
-              className="bg-transparent text-xs md:text-base border-none w-full outline-none pr-6"
+              className="bg-transparent text-xs md:text-[15px] border-none w-full outline-none pr-6"
             />
           </div>
           {/* Student Login */}
