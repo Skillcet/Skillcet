@@ -45,7 +45,7 @@ function Post({ title, time, subTitle, points, picture, alt }) {
     <div
       className={`${
         isExpanded ? "" : ""
-      } mx-auto border-[1px] border-customBorderColor bg-white shadow-sm  text-customLightGray rounded-lg px-4 pt-4 pb-1 mb-4 Post`}
+      } post mx-auto border-[1px] border-customBorderColor bg-white shadow-sm  text-customLightGray rounded-lg px-4 pt-4 pb-1 mb-4 Post`}
     >
       <div className="flex flex-col ">
         {/* Heading,subtitle and image */}

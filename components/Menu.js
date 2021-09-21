@@ -9,7 +9,7 @@ import Link from "next/link";
 function Menu({ topPicture }) {
   const router = useRouter();
 
-  const menuItems = menuOptions.map((item) => (
+  const menuItems = menuOptions().map((item) => (
     <div
       className={`mb-4 text-sm flex items-center
       ${
@@ -24,8 +24,8 @@ function Menu({ topPicture }) {
         <a
           className="inline-flex w-full"
           style={{
-            paddingTop: "8px",
-            paddingBottom: "8px",
+            paddingTop: "11px",
+            paddingBottom: "11px",
             width: "100%",
           }}
         >
