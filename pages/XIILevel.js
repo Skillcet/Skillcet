@@ -22,7 +22,7 @@ export default function NRA({ data, widgetData }) {
       pageTitle="Graduate Level"
       tabOption={1}
       tabNames={tabNames}
-      tabData={TabPanels}
+      tabData={TabData}
       widgetData={widgetData}
     ></Layout>
   );
