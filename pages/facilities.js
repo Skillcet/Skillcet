@@ -3,17 +3,10 @@ import { FacilitiesTabOptions } from "../data/tabOptions";
 import { Tab } from "@headlessui/react";
 import Post from "../components/Post";
 
+import { StyledTab, TabPanel } from "../components/SampleTabs";
+
 const tabNames = FacilitiesTabOptions.map((option) => (
-  <Tab
-    key={option.key}
-    className={({ selected }) =>
-      selected
-        ? "bg-blue-600 font-semibold h-full w-1/5 py-2"
-        : "w-1/5 font-semibold"
-    }
-  >
-    {option.title}
-  </Tab>
+  <StyledTab label={option.title} key={option.key} />
 ));
 
 export default function NRA({ data, widgetData }) {
@@ -23,88 +16,14 @@ export default function NRA({ data, widgetData }) {
   const Tab4Data = data.filter((option) => option.Tab == "StudyHall");
   const Tab5Data = data.filter((option) => option.Tab == "Hostels");
 
-  // const TabData = [Tab1Data, Tab2Data, Tab3Data, Tab4Data, Tab5Data];
-
-  const TabPanels = [
-    <Tab.Panel key={1}>
-      {Tab1Data.map((option) => {
-        return (
-          <Post
-            key={option.Post._id}
-            title={option.Post.PostTitle}
-            subTitle={option.Post.SubTitle}
-            time={option.updatedAt}
-            points={option.Post.Points}
-            picture={option.Post.PostPicture.url}
-            alt={option.Post.PostPicture.alternativeText}
-          />
-        );
-      })}
-    </Tab.Panel>,
-    ,
-    <Tab.Panel key={2}>
-      {Tab2Data.map((option) => (
-        <Post
-          key={option.Post._id}
-          title={option.Post.PostTitle}
-          subTitle={option.Post.SubTitle}
-          time={option.updatedAt}
-          points={option.Post.Points}
-          picture={option.Post.PostPicture.url}
-          alt={option.Post.PostPicture.alternativeText}
-        />
-      ))}
-    </Tab.Panel>,
-    ,
-    <Tab.Panel key={3}>
-      {Tab3Data.map((option) => (
-        <Post
-          key={option.Post._id}
-          title={option.Post.PostTitle}
-          subTitle={option.Post.SubTitle}
-          time={option.updatedAt}
-          points={option.Post.Points}
-          picture={option.Post.PostPicture.url || null}
-          alt={option.Post.PostPicture.alternativeText}
-        />
-      ))}
-    </Tab.Panel>,
-    ,
-    <Tab.Panel key={4}>
-      {Tab4Data.map((option) => (
-        <Post
-          key={option.Post._id}
-          title={option.Post.PostTitle}
-          subTitle={option.Post.SubTitle}
-          time={option.updatedAt}
-          points={option.Post.Points}
-          picture={option.Post.PostPicture.url || null}
-          alt={option.Post.PostPicture.alternativeText}
-        />
-      ))}
-    </Tab.Panel>,
-    ,
-    <Tab.Panel key={5}>
-      {Tab5Data.map((option) => (
-        <Post
-          key={option._id}
-          title={option.Post.PostTitle}
-          subTitle={option.Post.SubTitle}
-          time={option.updatedAt}
-          points={option.Post.Points}
-          picture={option.Post.PostPicture.formats.small.url}
-          alt={option.Post.PostPicture.alternativeText}
-        />
-      ))}
-    </Tab.Panel>,
-  ];
+  const TabData = [Tab1Data, Tab2Data, Tab3Data, Tab4Data, Tab5Data];
 
   return (
     <Layout
       pageTitle="Facilities"
       tabOption={1}
       tabNames={tabNames}
-      tabData={TabPanels}
+      tabData={TabData}
       widgetData={widgetData}
     ></Layout>
   );

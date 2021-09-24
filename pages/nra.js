@@ -4,17 +4,6 @@ import { Tab } from "@headlessui/react";
 import Post from "../components/Post";
 import { StyledTab, TabPanel } from "../components/SampleTabs";
 
-// const tabNames = nraTabOptions.map((option) => (
-//   <Tab
-//     key={option.key}
-//     className={({ selected }) =>
-//       selected ? "h-full w-1/5 py-[6px]" : "w-1/5 py-[6px]"
-//     }
-//   >
-//     {option.title}
-//   </Tab>
-// ));
-
 const tabNames = nraTabOptions.map((option) => (
   <StyledTab label={option.title} key={option.key} />
 ));
