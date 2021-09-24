@@ -11,7 +11,7 @@ function TabSelector({ tabNames, tabData }) {
           <Tab.List className="flex bg-primaryBlue1 px-6 rounded-xl text-white ">
             {tabNames}
           </Tab.List>
-          <div className="gradient-mask h-4 "></div>
+          <div className="gradient-mask h-4"></div>
         </div>
         <Tab.Panels>{tabData}</Tab.Panels>
       </Tab.Group>

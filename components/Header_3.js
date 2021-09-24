@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../public/logo.svg";
+import Logo from "../public/logo1.svg";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import { MenuIcon, AccountIcon } from "../data/svgs";
 import { SearchIcon } from "@heroicons/react/solid";
@@ -36,13 +36,19 @@ function Header_2({ isOpen, SetIsOpen }) {
           <div className=" relative h-[20px] w-[80px] sm:h-[28px] sm:w-[110px] flex items-center ml-4 md:ml-6">
             <Link href="/">
               <a>
-                <Image
+                {/* <Image
                   src={Logo}
                   alt="Logo"
                   objectFit="contain"
                   objectPosition="left"
                   layout="fill"
-                />
+                /> */}
+                <img
+                  src="/skillcetLogo.svg"
+                  alt="logo"
+                  height={300}
+                  width={300}
+                ></img>
               </a>
             </Link>
           </div>

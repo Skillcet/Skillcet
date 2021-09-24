@@ -140,3 +140,33 @@ body {
     width: 200px;
   }
 }
+.MuiTabs-flexContainer {
+  z-index: -1;
+}
+.MuiTabs-root {
+  border-bottom: 2px #2770ba solid;
+}
+
+.MuiButtonBase-root {
+  z-index: 1;
+}
+/* Container color */
+.css-uck6a7 {
+  background-color: white;
+}
+.MuiTabs-root {
+  background-color: white;
+  padding: 10px;
+}
+.MuiTabs-indicator {
+  border-radius: 8px;
+  z-index: 0;
+  height: 100% !important;
+  border-color: #e2f1fd !important;
+  background-color: #e2f1fd !important;
+  color: #e2f1fd !important;
+}
+
+.MuiTabs-indicatorSpan {
+  background-color: #e2f1fd !important;
+}

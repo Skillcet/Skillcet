@@ -5,6 +5,7 @@ import Menu from "../components/Menu";
 import TabSelector from "./TabSelector";
 import WidgetBar from "./WidgetBar";
 import Footer from "./Footer";
+import CustomizedTabs from "./SampleTabs";
 function Body({
   data,
   widgetData,
@@ -32,7 +33,9 @@ function Body({
           {/* Feed */}
           <div className="h-full w-full sm_1:col-span-8 flex flex-col min-h-[90vh]">
             {banner && <Banner />}
-            {tabOption && <TabSelector tabNames={tabNames} tabData={tabData} />}
+            {tabOption && (
+              <CustomizedTabs StyledTab={tabNames} tabData={tabData} />
+            )}
             {!tabOption && data && (
               <div>
                 {data?.map((object) => {

@@ -44,7 +44,8 @@ function WidgetBar({ widgetData }) {
           <Marquee
             marqueeItems={JobAlertsData}
             marqueeClassName="text-sm list-outside"
-            marqueeContainerClassName="w-11/12 mx-auto min-h-full"
+            marqueeContainerClassName="w-[86%] mx-auto min-h-full"
+            delay={20}
           />
         </div>
       </div>
@@ -58,7 +59,7 @@ function WidgetBar({ widgetData }) {
             marqueeClassName="text-sm"
             marqueeContainerClassName="w-11/12 mx-auto min-h-full"
           /> */}
-          <div className="w-11/12 mx-auto min-h-full text-sm">
+          <div className="w-[86%] mx-auto min-h-full text-sm">
             {NewBatchesData}
           </div>
         </div>
@@ -88,7 +89,8 @@ function WidgetBar({ widgetData }) {
           <Marquee
             marqueeItems={TestMarketingData}
             marqueeClassName="text-sm list-outside w-full"
-            marqueeContainerClassName="w-11/12 mx-auto min-h-full"
+            marqueeContainerClassName="w-[86%] mx-auto min-h-full"
+            delay={20}
           />
         </div>
       </div>
