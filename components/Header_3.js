@@ -44,7 +44,7 @@ function Header_2({ isOpen, SetIsOpen }) {
                   layout="fill"
                 /> */}
                 <img
-                  src="/skillcetLogo.svg"
+                  src="/skillcetLogo7.svg"
                   alt="logo"
                   height={300}
                   width={300}

@@ -2,13 +2,25 @@ import React from "react";
 import topImage from "../public/topImage.png";
 import { MenuIcon } from "../data/svgs";
 import menuOptions from "../data/menuOptions";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import Icon from "./Icon";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 function Menu({ topPicture }) {
   const router = useRouter();
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
   const menuItems = menuOptions().map((item) => (
     <div
       className={`text-sm flex items-center
@@ -40,15 +52,24 @@ function Menu({ topPicture }) {
   return (
     <div className="bg-white w-full text-sm h-full ">
       {topPicture && (
-        <div className="h-[185px] m-6  relative">
-          <Image
-            src={topImage}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-            alt="Top Sample Image"
-          ></Image>
-        </div>
+        <Slider {...settings} className="h-[185px] m-6 ">
+          <div className="h-[185px] relative">
+            <Image
+              src={topImage}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+              alt="Top Sample Image"
+            ></Image>
+            <Image
+              src={topImage}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+              alt="Top Sample Image"
+            ></Image>
+          </div>
+        </Slider>
       )}
 
       <div className="  mx-auto ">
