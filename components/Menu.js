@@ -12,9 +12,9 @@ import Link from "next/link";
 function Menu({ topPicture }) {
   const router = useRouter();
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -61,6 +61,8 @@ function Menu({ topPicture }) {
               className="rounded-lg"
               alt="Top Sample Image"
             ></Image>
+          </div>
+          <div className="h-[185px] relative">
             <Image
               src={topImage}
               layout="fill"
@@ -68,6 +70,7 @@ function Menu({ topPicture }) {
               className="rounded-lg"
               alt="Top Sample Image"
             ></Image>
+            <div></div>
           </div>
         </Slider>
       )}

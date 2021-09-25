@@ -107,6 +107,33 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* .slide-box {
+  background-color: red;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 90%,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: -webkit-gradient(
+    linear,
+    left 90%,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+} */
+
+.slick-center {
+  transition: all 0.2s ease-in;
+  transform: scale(1.06) !important;
+}
+.slick-slide {
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+}
+
 .slick-slide {
   padding: 0 5px;
 }
@@ -145,6 +172,9 @@ body {
 }
 .MuiTabs-root {
   border-bottom: 2px #2770ba solid;
+}
+.MuiBox-root {
+  padding: 0px !important;
 }
 
 .MuiButtonBase-root {

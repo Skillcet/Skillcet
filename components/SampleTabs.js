@@ -79,7 +79,7 @@ export default function CustomizedTabs({ StyledTab, tabData }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  console.log(tabData);
+
   return (
     <Box sx={{ width: "100%" }}>
       <Box sx={{ bgcolor: "white" }}>

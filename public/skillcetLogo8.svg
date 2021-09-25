@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107.242" height="29.368" viewBox="0 0 107.242 29.368">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="107.242" height="29.368"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="107.242" height="29.368" fill="#fff"/>
+    <path id="Path_1" data-name="Path 1" d="M99.04,19.158a2.621,2.621,0,0,1-4.722,0l-3.364-6.725-3.8-7.651A2.537,2.537,0,0,1,89.536.988H104.4c1.385,0,2.6,2.07,1.879,3.7L102.4,12.433Z" fill="#0171bb"/>
+    <text id="SKILL" transform="translate(0.013 18.284)" font-size="20" font-family="Disorder-Regular, Disorder"><tspan x="0" y="0">SKILL</tspan></text>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="19.654" height="19.748" rx="3.2" transform="translate(66.437 0.893)" fill="#32a3ed"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="9.827" cy="9.827" r="9.827" transform="translate(45.933 0.893)" fill="#0171bb"/>
+    <text id="C" transform="translate(49.903 17.61)" fill="#fff" font-size="20" font-family="Harabara"><tspan x="0" y="0">C</tspan></text>
+    <text id="E" transform="translate(71.37 17.575)" fill="#fff" font-size="20" font-family="Harabara"><tspan x="0" y="0">E</tspan></text>
+    <text id="T" transform="translate(91.338 17.454)" fill="#fff" font-size="20" font-family="Harabara"><tspan x="0" y="0">T</tspan></text>
+    <path id="Path_2" data-name="Path 2" d="M97.624,28.3H10.516l-6.942-1.48a.2.2,0,0,1-.006-.383l6.948-1.716H97.624a1.789,1.789,0,0,1,1.789,1.79h0A1.789,1.789,0,0,1,97.624,28.3Z" fill="#434343"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="2.31" height="3.582" transform="translate(86.699 24.713)" fill="#fff"/>
+    <path id="Path_3" data-name="Path 3" d="M7,27.546l.567.121V25.443L7,25.583Z" fill="#fff"/>
+    <text id="The_National_Institute_for_NRA" data-name="The National Institute for NRA" transform="translate(18.75 27.51)" fill="#fff" font-size="2.8" font-family="ArialMT, Arial" letter-spacing="0.3em"><tspan x="0" y="0">The National Institute for NRA</tspan></text>
+  </g>
+</svg>

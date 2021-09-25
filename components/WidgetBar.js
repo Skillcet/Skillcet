@@ -2,6 +2,7 @@ import React from "react";
 import Marquee from "react-marquee-master";
 import Image from "next/image";
 import MaterialSample from "../public/material_1.png";
+import Material from "./Material";
 function WidgetBar({ widgetData }) {
   const JobAlertsData = widgetData
     .filter((option) => option.WidgetOptions == "JobAlerts")[0]
@@ -65,22 +66,7 @@ function WidgetBar({ widgetData }) {
         </div>
       </div>
       {/* Material */}
-      <div className="my-3">
-        <div className=" bg-customSearchBar w-full pb-4 rounded-lg">
-          <h1 className="pt-2 text-center">Material</h1>
-          <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mt-2 mb-4" />
-          <div className="mx-auto">
-            <div className=" mx-[48px] relative">
-              <Image
-                className="mx-auto"
-                src={MaterialSample}
-                alt="Material"
-                objectFit="fill"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Material />
       {/* Test Marketing */}
       <div className="my-3">
         <div className=" bg-customSearchBar w-full pb-4 rounded-lg">
@@ -99,3 +85,21 @@ function WidgetBar({ widgetData }) {
 }
 
 export default WidgetBar;
+{
+  /* <div className="my-3">
+      <div className=" bg-customSearchBar w-full pb-4 rounded-lg">
+        <h1 className="pt-2 text-center">Material</h1>
+        <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mt-2 mb-4" />
+        <div className="mx-auto">
+          <div className=" mx-[48px] relative border-2 border-red-500">
+            <Image
+              className="mx-auto"
+              src={MaterialSample}
+              alt="Material"
+              objectFit="fill"
+            />
+          </div>
+        </div>
+      </div>
+    </div> */
+}

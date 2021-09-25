@@ -1,0 +1,12 @@
+.slick-center {
+  transition: all 0.2s ease-in;
+  transform: scale(1.02) !important;
+}
+.slick-slide {
+  transform: scale(1);
+  transition: all 0.2s ease-in;
+}
+.slick-track {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
