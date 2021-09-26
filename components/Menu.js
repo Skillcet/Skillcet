@@ -42,7 +42,10 @@ function Menu({ topPicture }) {
           }}
         >
           <div className="flex px-6 items-center">
-            <Icon className="h-5 w-5 mr-4 flex items-center" icon={item.icon} />
+            <Icon
+              className="h-5 w-5 mr-4 flex items-center fill-current"
+              icon={item.icon}
+            />
             {item.name}
           </div>
         </a>

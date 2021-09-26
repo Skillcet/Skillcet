@@ -1,7 +1,11 @@
 import React from "react";
-
+import NRAIcon from "../data/Icons/NRAIcon";
 const sampletest = () => {
-  return <>Sample Test Page</>;
+  return (
+    <div>
+      <NRAIcon color="primary" />
+    </div>
+  );
 };
 
 export default sampletest;

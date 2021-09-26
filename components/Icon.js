@@ -1,6 +1,6 @@
 import React from "react";
-
-function Icon({ icon, className,fill }) {
+import SvgIcon from "@mui/material/SvgIcon";
+function Icon({ icon, className, fill }) {
   return <div className={className}>{icon}</div>;
 }
 
