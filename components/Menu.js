@@ -23,7 +23,7 @@ function Menu({ topPicture }) {
   };
   const menuItems = menuOptions().map((item) => (
     <div
-      className={`text-sm flex items-center
+      className={`text-sm flex items-center 
       ${
         router.pathname == item.link
           ? "bg-customSearchBar text-primaryBlue1 rounded-r-xl"
@@ -41,7 +41,7 @@ function Menu({ topPicture }) {
             width: "100%",
           }}
         >
-          <div className="flex px-6 items-center">
+          <div className="flex pl-6 items-center">
             <Icon
               className="h-5 w-5 mr-4 flex items-center fill-current"
               icon={item.icon}
@@ -53,7 +53,7 @@ function Menu({ topPicture }) {
     </div>
   ));
   return (
-    <div className="bg-white w-full text-sm h-full ">
+    <div className="bg-white text-sm h-full w-[280px] pr-4 ">
       {topPicture && (
         <Slider {...settings} className="h-[185px] m-6 ">
           <div className="h-[185px] relative">

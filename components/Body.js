@@ -19,7 +19,7 @@ function Body({
   return (
     <div className="mb-14 md:mb-0 mx-auto">
       <div
-        className={` menudiv hidden lg:inline-flex fixed w-[286px] top-12 sm:top-16 md:top-18 bg-white z-10 overflow-x-hidden overflow-y-scroll menuheight transform ${
+        className={` menudiv hidden lg:inline-flex fixed  top-12 sm:top-16 md:top-18 bg-white z-10  menuheight transform ${
           isOpen
             ? "translate-x-0 ease-out transition duration-200"
             : "-translate-x-full ease-in transition duration-200"

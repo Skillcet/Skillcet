@@ -19,12 +19,15 @@
   background: transparent !important;
 }
 .menudiv {
-  overflow: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
-  scrollbar-width: normal;
+}
+.menudiv:hover {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.menudiv::-webkit-scrollbar {
+/* .menudiv::-webkit-scrollbar {
   background: transparent;
   height: 16px;
 }
@@ -62,7 +65,7 @@
 }
 .menudiv::-webkit-scrollbar-corner {
   background: transparent;
-}
+} */
 
 /* .menudiv::-webkit-scrollbar-track {
   border-radius: 5px;
