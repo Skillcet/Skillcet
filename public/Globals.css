@@ -19,15 +19,25 @@
   background: transparent !important;
 }
 .menudiv {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-.menudiv:hover {
   overflow-y: scroll;
   overflow-x: hidden;
+
+  mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  mask-size: 100% 20000px;
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+}
+.menudiv:hover {
+  -webkit-mask-position: left top;
+  mask-position: left top;
 }
 
-/* .menudiv::-webkit-scrollbar {
+.menudiv::-webkit-scrollbar {
   background: transparent;
   height: 16px;
 }
@@ -65,7 +75,7 @@
 }
 .menudiv::-webkit-scrollbar-corner {
   background: transparent;
-} */
+}
 
 /* .menudiv::-webkit-scrollbar-track {
   border-radius: 5px;
@@ -74,15 +84,15 @@
 .menudiv::-webkit-scrollbar-track:hover {
   border-radius: 5px;
   background-color: silver;
-} */
+}
 
+
+
+/* Optional: show position indicator in red */
 html::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
-
-/* Optional: show position indicator in red */
-
 body {
   background-color: white;
   margin: 0;
