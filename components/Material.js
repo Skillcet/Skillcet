@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MaterialSample from "../public/material_1.png";
+import MaterialSample from "../public/material_2.png";
 import Slider from "react-slick";
 import Styles from "./Material.module.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -35,7 +35,7 @@ const Material = () => {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "50px",
     slidesToShow: 1,
     speed: 500,
     arrows: true,
@@ -45,9 +45,9 @@ const Material = () => {
   return (
     <div className="my-3">
       <div className=" bg-customSearchBar w-full pb-4 rounded-lg">
-        <h1 className="pt-2 text-center">Material</h1>
-        <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mt-2 mb-4 " />
-        <div className="w-[70%] mx-auto slide-box">
+        <h1 className="py-[12.8px] text-center">Material</h1>
+        <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mb-2 " />
+        <div className="w-[70.8%] mx-auto slide-box">
           <Slider {...settings} className=" py-2">
             <div className="py-2">
               <div className="h-full">

@@ -8,7 +8,7 @@ function WidgetBar({ widgetData }) {
     .filter((option) => option.WidgetOptions == "JobAlerts")[0]
     .Points.map((point) => (
       <p
-        className="py-2 list-item list-disc list-outside w-[90%] mx-auto"
+        className="py-[12.8px] list-item list-disc list-outside w-[90%] mx-auto"
         key={point._id}
       >
         {point.ThePoint}
@@ -18,7 +18,7 @@ function WidgetBar({ widgetData }) {
     .filter((option) => option.WidgetOptions == "NewBatches")[0]
     .Points.map((point) => (
       <p
-        className="py-2 list-item list-disc list-outside w-[90%] mx-auto"
+        className="py-[12.8px] list-item list-disc list-outside w-[90%] mx-auto"
         key={point._id}
       >
         {point.ThePoint}
@@ -28,7 +28,7 @@ function WidgetBar({ widgetData }) {
     .filter((option) => option.WidgetOptions == "TestMarketing")[0]
     .Points.map((point) => (
       <p
-        className="py-2 list-item list-disc list-outside w-[90%] mx-auto"
+        className="py-[12.8px] list-item list-disc list-outside w-[90%] mx-auto"
         key={point._id}
       >
         {point.ThePoint}
@@ -53,8 +53,8 @@ function WidgetBar({ widgetData }) {
       {/* New Batches */}
       <div className="my-3">
         <div className=" bg-customSearchBar w-full pb-4 rounded-lg">
-          <h1 className="pt-2 text-center">New Batches</h1>
-          <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 my-2" />
+          <h1 className="py-[12.8px] text-center">New Batches</h1>
+          <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mb-2" />
           {/* <Marquee
             marqueeItems={NewBatchesData}
             marqueeClassName="text-sm"
@@ -70,8 +70,8 @@ function WidgetBar({ widgetData }) {
       {/* Test Marketing */}
       <div className="my-3">
         <div className=" bg-customSearchBar w-full pb-4 rounded-lg">
-          <h1 className="pt-2 text-center">test Marketing</h1>
-          <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 my-2" />
+          <h1 className="py-[12.8px] text-center">test Marketing</h1>
+          <hr className="border-t-w-[2px] border-secondaryBlue1 mx-6 mb-2" />
           <Marquee
             marqueeItems={TestMarketingData}
             marqueeClassName="text-sm list-outside w-full"

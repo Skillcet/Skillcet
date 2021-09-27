@@ -81,12 +81,13 @@ export default function CustomizedTabs({ StyledTab, tabData }) {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ bgcolor: "white" }}>
+    <Box sx={{ width: "100%" }} className="my-4">
+      <Box sx={{ bgcolor: "white" }} className="">
         <StyledTabs
           value={value}
           onChange={handleChange}
           aria-label="styled tabs example"
+          className="text-sm"
         >
           {StyledTab}
         </StyledTabs>

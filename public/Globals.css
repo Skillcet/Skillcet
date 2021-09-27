@@ -141,6 +141,7 @@ body {
 .slick-center {
   transition: all 0.2s ease-in;
   transform: scale(1.06) !important;
+  /* padding: 0 16px !important; */
 }
 .slick-slide {
   transform: scale(1);
@@ -185,6 +186,11 @@ body {
 }
 .MuiTabs-root {
   border-bottom: 2px #2770ba solid;
+  padding: 0px !important;
+  min-height: 0px !important;
+}
+.MuiTabs-scroller {
+  margin-bottom: 8.5px !important;
 }
 .MuiBox-root {
   padding: 0px !important;
@@ -192,7 +198,12 @@ body {
 
 .MuiButtonBase-root {
   z-index: 1;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 0px !important;
+  font-size: 14px !important;
 }
+
 /* Container color */
 .css-uck6a7 {
   background-color: white;
