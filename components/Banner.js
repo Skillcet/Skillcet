@@ -38,7 +38,7 @@ function Banner() {
   return (
     <div className="  ">
       <Slider {...settings} className="h-full ">
-        <div className=" text-black h-[130px] mt-6 sm:h-[185px] rounded-lg flex items-center justify-around w-full shadow-sm mb-3 mx-auto relative">
+        <div className=" text-black h-[130px] mt-6 sm:h-[185px] rounded-lg flex items-center justify-around w-full shadow-sm mb-4 mx-auto relative">
           <Image
             src={BannerImage}
             layout="fill"

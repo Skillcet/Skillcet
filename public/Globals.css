@@ -188,6 +188,7 @@ body {
   border-bottom: 2px #2770ba solid;
   padding: 0px !important;
   min-height: 0px !important;
+  margin-bottom: 16px;
 }
 .MuiTabs-scroller {
   margin-bottom: 8.5px !important;

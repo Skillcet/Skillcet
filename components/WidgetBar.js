@@ -46,7 +46,7 @@ function WidgetBar({ widgetData }) {
             marqueeItems={JobAlertsData}
             marqueeClassName="text-sm list-outside"
             marqueeContainerClassName="w-[86%] mx-auto min-h-full"
-            delay={20}
+            delay={40}
           />
         </div>
       </div>
