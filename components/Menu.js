@@ -43,7 +43,11 @@ function Menu({ topPicture }) {
         >
           <div className="flex pl-6 items-center">
             <Icon
-              className="h-5 w-5 mr-4 flex items-center fill-current"
+              className={`h-5 w-5 mr-4 flex items-center fill-current ${
+                router.pathname == item.link
+                  ? "text-primaryBlue1"
+                  : "text-customHeaderGray"
+              }`}
               icon={item.icon}
             />
             {item.name}
