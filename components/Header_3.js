@@ -94,7 +94,10 @@ function Header_2({ isOpen, SetIsOpen }) {
               </div>
               <div className="flex items-center text-gray-500">
                 <NotificationsNoneIcon className="" />
-                <AccountIcon className="h-6 w-6 text-gray-500 cursor-pointer ml-6" />
+                <div className="flex flex-col items-center justify-between ml-6">
+                  <AccountIcon className="h-6 w-6 text-gray-500 cursor-pointer" />
+                  Login
+                </div>
               </div>
             </div>
           </div>

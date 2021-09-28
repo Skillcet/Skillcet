@@ -185,7 +185,7 @@ body {
   z-index: -1;
 }
 .MuiTabs-root {
-  border-bottom: 2px #2770ba solid;
+  border-bottom: 1px #2770ba solid;
   padding: 0px !important;
   min-height: 0px !important;
   margin-bottom: 16px;
